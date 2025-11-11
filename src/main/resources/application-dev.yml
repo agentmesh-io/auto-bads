@@ -1,0 +1,96 @@
+# Development Profile Configuration
+
+spring:
+  # H2 Database for local development
+  datasource:
+    url: jdbc:h2:mem:autobads
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.H2Dialect
+
+  # Spring AI - Use default/test keys
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:sk-test-key}
+      chat:
+        model: gpt-4-turbo-preview
+        temperature: 0.7
+        max-tokens: 2000
+
+  # Kafka - Local
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: auto-bads-dev
+      auto-offset-reset: earliest
+    producer:
+      properties:
+        spring.json.add.type.headers: false
+
+# Logging - Verbose for development
+logging:
+  level:
+    root: INFO
+    com.therighthandapp.autobads: DEBUG
+    org.springframework.modulith: DEBUG
+    org.springframework.ai: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+# Server
+server:
+  port: 8083
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-stacktrace: always
+
+# Actuator - Full exposure for dev
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+# Auto-BADS Specific Configuration
+auto-bads:
+  # Recommendation Engine Weights
+  recommendation:
+    weights:
+      strategic-alignment: 0.30
+      technical-feasibility: 0.25
+      market-opportunity: 0.25
+      resource-cost: 0.20
+    pmf-threshold: 40.0
+  
+  # Machine Learning Configuration
+  ml:
+    model-path: models/lstm-financial-forecasting.zip
+    auto-train: true
+    training-samples: 100  # Reduced for dev
+    training-epochs: 20     # Reduced for dev
+
+# AgentMesh Integration - Local
+agentmesh:
+  api:
+    url: http://localhost:8080
+    key: dev-test-key

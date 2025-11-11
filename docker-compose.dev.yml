@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  # Development version - uses H2 database, no Kafka
+  autobads-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: autobads-dev
+    ports:
+      - "8080:8080"
+      - "5005:5005"  # Debug port
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+      - SPRING_AI_OPENAI_API_KEY=${OPENAI_API_KEY}
+      - JAVA_OPTS=-Xmx512m -Xms256m -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
+    volumes:
+      # Mount for live reload (if using spring-boot-devtools)
+      - ./target:/app/target
+    networks:
+      - autobads-dev-network
+    restart: unless-stopped
+
+networks:
+  autobads-dev-network:
+    driver: bridge
+

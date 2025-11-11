@@ -1,0 +1,183 @@
+package com.therighthandapp.autobads.solution;
+
+import com.therighthandapp.autobads.core.domain.SolutionPackage;
+import org.springframework.ai.chat.model.ChatModel;
+import org.springframework.stereotype.Component;
+
+import java.util.List;
+import java.util.UUID;
+
+/**
+ * Hybrid Solution Generator - Combines commercial platform with custom extensions
+ */
+@Component
+public class HybridSolutionGenerator {
+
+    private final ChatModel chatClient;
+
+    public SolutionPackage generateHybridSolution(String ideaId, String srs, SynthesisContext context) {
+        log.info("Generating HYBRID solution package");
+
+        return SolutionPackage.builder()
+                .packageId(UUID.randomUUID().toString())
+                .ideaId(ideaId)
+                .type(SolutionPackage.SolutionType.HYBRID)
+                .description("Commercial platform for standard features + custom development for unique differentiators")
+                .architecture(generateHybridArchitecture())
+                .features(generateHybridFeatures())
+                .technicalSpec(generateHybridTechnicalSpec(srs))
+                .resources(generateHybridResourceRequirements())
+                .timeline(generateHybridTimeline())
+                .score(calculateHybridScore(context))
+                .build();
+    }
+
+    private SolutionPackage.ArchitecturalBlueprint generateHybridArchitecture() {
+        return SolutionPackage.ArchitecturalBlueprint.builder()
+                .systemArchitecture("Commercial core platform + custom microservices for differentiation")
+                .components(List.of(
+                        "Commercial SaaS Platform (standard features)",
+                        "Custom AI/ML Microservice",
+                        "Custom Analytics Engine",
+                        "Integration Middleware",
+                        "Custom Frontend Layer",
+                        "Unified API Gateway"
+                ))
+                .integrationPoints(List.of(
+                        "Platform APIs for core functionality",
+                        "Event streaming between custom and platform services",
+                        "Unified authentication layer",
+                        "Shared data warehouse"
+                ))
+                .dataFlowDiagram("Users -> Custom Frontend -> API Gateway -> [Platform APIs | Custom Services] -> Data Layer")
+                .technologyStack(List.of(
+                        "Core Platform: Commercial SaaS",
+                        "Custom Services: Java Spring Boot, Python",
+                        "Frontend: React (custom) + Platform UI (embedded)",
+                        "Integration: Apache Kafka, REST APIs",
+                        "Infrastructure: Kubernetes for custom services"
+                ))
+                .build();
+    }
+
+    private List<SolutionPackage.Feature> generateHybridFeatures() {
+        return List.of(
+                SolutionPackage.Feature.builder()
+                        .id("F001")
+                        .name("Platform Core Features")
+                        .description("Leverage commercial platform for standard CRM/workflow features")
+                        .priority("MUST_HAVE")
+                        .acceptance_criteria("Platform provides 70% of required functionality")
+                        .estimatedEffort(3) // Configuration only
+                        .build(),
+                SolutionPackage.Feature.builder()
+                        .id("F002")
+                        .name("Custom AI Analytics Engine")
+                        .description("Build proprietary ML models for competitive differentiation")
+                        .priority("MUST_HAVE")
+                        .acceptance_criteria("Custom analytics outperform platform capabilities")
+                        .estimatedEffort(21)
+                        .build(),
+                SolutionPackage.Feature.builder()
+                        .id("F003")
+                        .name("Unified User Experience")
+                        .description("Custom frontend that seamlessly integrates platform and custom features")
+                        .priority("MUST_HAVE")
+                        .acceptance_criteria("Users cannot distinguish between platform and custom features")
+                        .estimatedEffort(13)
+                        .build(),
+                SolutionPackage.Feature.builder()
+                        .id("F004")
+                        .name("Advanced Integrations")
+                        .description("Custom connectors for specialized systems")
+                        .priority("SHOULD_HAVE")
+                        .acceptance_criteria("All required systems connected and syncing")
+                        .estimatedEffort(8)
+                        .build()
+        );
+    }
+
+    private SolutionPackage.TechnicalSpecification generateHybridTechnicalSpec(String srs) {
+        return SolutionPackage.TechnicalSpecification.builder()
+                .srsDocument(srs + "\n\n## Hybrid Architecture\nStandard features: Platform\nDifferentiating features: Custom build")
+                .apiSpecification("Combined: Platform API + Custom OpenAPI 3.0 spec")
+                .technicalConstraints(List.of(
+                        "Custom services must integrate with platform APIs",
+                        "Maintain consistency in authentication and data models",
+                        "Balance between platform upgrades and custom stability"
+                ))
+                .qualityAttributes(List.of(
+                        "Flexibility: Combine platform speed with custom innovation",
+                        "Maintainability: Clear boundaries between platform and custom",
+                        "Performance: Optimize custom services for differentiating features"
+                ))
+                .securityRequirements("Platform security + custom service hardening, unified auth, data encryption")
+                .build();
+    }
+
+    private SolutionPackage.ResourceRequirements generateHybridResourceRequirements() {
+        return SolutionPackage.ResourceRequirements.builder()
+                .requiredDevelopers(3)
+                .requiredSkills(List.of(
+                        "Platform administration",
+                        "Full-stack development (custom services)",
+                        "API integration and middleware",
+                        "AI/ML engineering (for custom features)",
+                        "DevOps for hybrid environment"
+                ))
+                .infrastructureNeeds("Platform SaaS cost + cloud infrastructure for custom services ($2K-3K/month)")
+                .vendorDependencies("Platform vendor + limited lock-in due to custom layer")
+                .capacityScore(70.0) // Moderate internal capacity
+                .build();
+    }
+
+    private SolutionPackage.Timeline generateHybridTimeline() {
+        return SolutionPackage.Timeline.builder()
+                .estimatedWeeks(20)
+                .milestones(List.of(
+                        SolutionPackage.Milestone.builder()
+                                .name("Platform Setup & Architecture")
+                                .weekNumber(4)
+                                .deliverable("Platform configured, custom architecture designed")
+                                .build(),
+                        SolutionPackage.Milestone.builder()
+                                .name("Core Integration")
+                                .weekNumber(10)
+                                .deliverable("Platform and custom services integrated")
+                                .build(),
+                        SolutionPackage.Milestone.builder()
+                                .name("Custom Features Development")
+                                .weekNumber(16)
+                                .deliverable("Differentiating features implemented")
+                                .build(),
+                        SolutionPackage.Milestone.builder()
+                                .name("Production Launch")
+                                .weekNumber(20)
+                                .deliverable("Unified system deployed and operational")
+                                .build()
+                ))
+                .build();
+    }
+
+    private SolutionPackage.SolutionScore calculateHybridScore(SynthesisContext context) {
+        double strategicAlignment = 78.0; // Good balance of control and speed
+        double technicalFeasibility = 75.0; // Moderate complexity
+        double marketOpportunity = context.getMarketAnalysis() != null ?
+                context.getMarketAnalysis().getMarketOpportunityScore() : 60.0;
+        double resourceCost = 62.0; // Moderate cost
+
+        double weightedScore = (strategicAlignment * 0.30) +
+                              (technicalFeasibility * 0.25) +
+                              (marketOpportunity * 0.25) +
+                              (resourceCost * 0.20);
+
+        return SolutionPackage.SolutionScore.builder()
+                .strategicAlignment(strategicAlignment)
+                .technicalFeasibility(technicalFeasibility)
+                .marketOpportunity(marketOpportunity)
+                .resourceCost(resourceCost)
+                .weightedTotalScore(weightedScore)
+                .recommendation("Best for: Balance of speed and differentiation, strategic competitive advantage")
+                .build();
+    }
+}

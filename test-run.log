@@ -1,0 +1,2130 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.therighthandapp:Auto-BADS >--------------------
+[INFO] Building Auto-BADS 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ Auto-BADS ---
+[INFO] Deleting /Users/univers/projects/agentmesh/Auto-BADS/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ Auto-BADS ---
+[INFO] Copying 4 resources from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ Auto-BADS ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 71 source files with javac [debug parameters release 21] to target/classes
+[WARNING] /Users/univers/projects/agentmesh/Auto-BADS/src/main/java/com/therighthandapp/autobads/product/package-info.java: a package-info.java file has already been seen for package unnamed package
+[WARNING] /Users/univers/projects/agentmesh/Auto-BADS/src/main/java/com/therighthandapp/autobads/solution/package-info.java: a package-info.java file has already been seen for package unnamed package
+[WARNING] /Users/univers/projects/agentmesh/Auto-BADS/src/main/java/com/therighthandapp/autobads/product/package-info.java: a package-info.java file has already been seen for package unnamed package
+[WARNING] /Users/univers/projects/agentmesh/Auto-BADS/src/main/java/com/therighthandapp/autobads/solution/package-info.java: a package-info.java file has already been seen for package unnamed package
+[WARNING] /Users/univers/projects/agentmesh/Auto-BADS/src/main/java/com/therighthandapp/autobads/product/package-info.java: a package-info.java file has already been seen for package unnamed package
+[WARNING] /Users/univers/projects/agentmesh/Auto-BADS/src/main/java/com/therighthandapp/autobads/solution/package-info.java: a package-info.java file has already been seen for package unnamed package
+[WARNING] /Users/univers/projects/agentmesh/Auto-BADS/src/main/java/com/therighthandapp/autobads/product/package-info.java: a package-info.java file has already been seen for package unnamed package
+[WARNING] /Users/univers/projects/agentmesh/Auto-BADS/src/main/java/com/therighthandapp/autobads/solution/package-info.java: a package-info.java file has already been seen for package unnamed package
+[WARNING] /Users/univers/projects/agentmesh/Auto-BADS/src/main/java/com/therighthandapp/autobads/product/package-info.java: a package-info.java file has already been seen for package unnamed package
+[WARNING] /Users/univers/projects/agentmesh/Auto-BADS/src/main/java/com/therighthandapp/autobads/solution/package-info.java: a package-info.java file has already been seen for package unnamed package
+[INFO] /Users/univers/projects/agentmesh/Auto-BADS/src/main/java/com/therighthandapp/autobads/financial/HybridForecastingEngine.java: /Users/univers/projects/agentmesh/Auto-BADS/src/main/java/com/therighthandapp/autobads/financial/HybridForecastingEngine.java uses or overrides a deprecated API.
+[INFO] /Users/univers/projects/agentmesh/Auto-BADS/src/main/java/com/therighthandapp/autobads/financial/HybridForecastingEngine.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ Auto-BADS ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ Auto-BADS ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 12 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ Auto-BADS ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+Nov 10, 2025 6:35:51 AM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Nov 10, 2025 6:35:52 AM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Nov 10, 2025 6:35:52 AM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Nov 10, 2025 6:35:52 AM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Nov 10, 2025 6:35:52 AM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Nov 10, 2025 6:35:52 AM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Nov 10, 2025 6:35:52 AM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Nov 10, 2025 6:35:52 AM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Nov 10, 2025 6:35:52 AM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Nov 10, 2025 6:35:52 AM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Nov 10, 2025 6:35:52 AM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Nov 10, 2025 6:35:52 AM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Nov 10, 2025 6:35:52 AM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+Nov 10, 2025 6:35:52 AM org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+WARNING: Discovered 2 'junit-platform.properties' configuration files in the classpath; only the first will be used.
+[INFO] Running com.therighthandapp.autobads.financial.model.LstmFinancialModelTest
+06:35:53.163 [main] INFO com.therighthandapp.autobads.financial.model.LstmFinancialModel -- Building LSTM model architecture
+06:35:53.217 [main] INFO org.nd4j.linalg.factory.Nd4jBackend -- Loaded [CpuBackend] backend
+06:35:54.459 [main] INFO org.nd4j.nativeblas.NativeOpsHolder -- Number of threads used for linear algebra: 1
+06:35:54.478 [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuNDArrayFactory -- Binary level Generic x86 optimization level Generic x86
+06:35:54.557 [main] INFO org.nd4j.nativeblas.Nd4jBlas -- Number of threads used for OpenMP BLAS: 12
+06:35:54.605 [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner -- Backend used: [CPU]; OS: [Mac OS X]
+06:35:54.605 [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner -- Cores: [12]; Memory: [6.0GB];
+06:35:54.605 [main] INFO org.nd4j.linalg.api.ops.executioner.DefaultOpExecutioner -- Blas vendor: [OPENBLAS]
+06:35:54.616 [main] INFO org.nd4j.linalg.cpu.nativecpu.CpuBackend -- Backend build information:
+ Clang: "12.0.0 (clang-1200.0.32.29)"
+STD version: 201103L
+DEFAULT_ENGINE: samediff::ENGINE_CPU
+HAVE_FLATBUFFERS
+HAVE_OPENBLAS
+06:35:54.658 [main] INFO org.deeplearning4j.nn.multilayer.MultiLayerNetwork -- Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+06:35:54.762 [main] INFO com.therighthandapp.autobads.financial.model.LstmFinancialModel -- LSTM model built successfully. Total params: 118593
+06:35:54.836 [main] INFO com.therighthandapp.autobads.financial.model.LstmFinancialModel -- Building LSTM model architecture
+06:35:54.850 [main] INFO com.therighthandapp.autobads.financial.model.LstmFinancialModel -- LSTM model built successfully. Total params: 118593
+06:35:54.857 [main] INFO com.therighthandapp.autobads.financial.model.LstmFinancialModel -- Building LSTM model architecture
+06:35:54.864 [main] INFO com.therighthandapp.autobads.financial.model.LstmFinancialModel -- LSTM model built successfully. Total params: 118593
+06:35:54.865 [main] INFO com.therighthandapp.autobads.financial.model.LstmFinancialModel -- Predicting 12 months of revenue
+06:35:55.903 [main] INFO com.therighthandapp.autobads.financial.model.LstmFinancialModel -- Predicting 12 months of revenue
+06:35:56.167 [main] INFO com.therighthandapp.autobads.financial.model.LstmFinancialModel -- Building LSTM model architecture
+06:35:56.176 [main] INFO com.therighthandapp.autobads.financial.model.LstmFinancialModel -- LSTM model built successfully. Total params: 118593
+06:35:56.176 [main] INFO com.therighthandapp.autobads.financial.model.LstmFinancialModel -- Predicting 6 months of revenue
+06:35:56.288 [main] INFO com.therighthandapp.autobads.financial.model.LstmFinancialModel -- Predicting 12 months of revenue
+06:35:56.436 [main] INFO com.therighthandapp.autobads.financial.model.LstmFinancialModel -- Predicting 24 months of revenue
+06:35:56.807 [main] INFO com.therighthandapp.autobads.financial.model.LstmFinancialModel -- Building LSTM model architecture
+06:35:56.814 [main] INFO com.therighthandapp.autobads.financial.model.LstmFinancialModel -- LSTM model built successfully. Total params: 118593
+06:35:56.814 [main] INFO com.therighthandapp.autobads.financial.model.LstmFinancialModel -- Predicting 12 months of revenue
+06:35:56.982 [main] INFO com.therighthandapp.autobads.financial.model.LstmFinancialModel -- Building LSTM model architecture
+06:35:56.985 [main] INFO com.therighthandapp.autobads.financial.model.LstmFinancialModel -- LSTM model built successfully. Total params: 118593
+06:35:56.994 [main] INFO com.therighthandapp.autobads.financial.model.LstmFinancialModel -- Building LSTM model architecture
+06:35:56.999 [main] INFO com.therighthandapp.autobads.financial.model.LstmFinancialModel -- LSTM model built successfully. Total params: 118593
+06:35:57.568 [main] INFO com.therighthandapp.autobads.financial.model.LstmFinancialModel -- Model saved to /tmp/test-lstm-model.zip
+06:35:57.805 [main] INFO com.therighthandapp.autobads.financial.model.LstmFinancialModel -- Model loaded from /tmp/test-lstm-model.zip
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.767 s -- in com.therighthandapp.autobads.financial.model.LstmFinancialModelTest
+[INFO] Running com.therighthandapp.autobads.financial.model.SyntheticDataGeneratorTest
+06:35:57.842 [main] INFO com.therighthandapp.autobads.financial.model.SyntheticDataGenerator -- Generating 10 synthetic financial time series samples
+06:35:57.889 [main] INFO com.therighthandapp.autobads.financial.model.SyntheticDataGenerator -- Generating 100 synthetic financial time series samples
+06:35:57.911 [main] INFO com.therighthandapp.autobads.financial.model.SyntheticDataGenerator -- Generating 5 synthetic financial time series samples
+06:35:57.926 [main] INFO com.therighthandapp.autobads.financial.model.SyntheticDataGenerator -- Generating 10 synthetic financial time series samples
+06:35:57.939 [main] INFO com.therighthandapp.autobads.financial.model.SyntheticDataGenerator -- Generating 50 synthetic financial time series samples
+06:35:57.949 [main] INFO com.therighthandapp.autobads.financial.model.SyntheticDataGenerator -- Generating 0 synthetic financial time series samples
+06:35:57.952 [main] INFO com.therighthandapp.autobads.financial.model.SyntheticDataGenerator -- Generating 10 synthetic financial time series samples
+06:35:57.972 [main] INFO com.therighthandapp.autobads.financial.model.SyntheticDataGenerator -- Generating 10 synthetic financial time series samples
+06:35:57.985 [main] INFO com.therighthandapp.autobads.financial.model.SyntheticDataGenerator -- Generating 10 synthetic financial time series samples
+06:35:57.996 [main] INFO com.therighthandapp.autobads.financial.model.SyntheticDataGenerator -- Generating 10 synthetic financial time series samples
+06:35:58.002 [main] INFO com.therighthandapp.autobads.financial.model.SyntheticDataGenerator -- Generating 20 synthetic financial time series samples
+06:35:58.010 [main] INFO com.therighthandapp.autobads.financial.model.SyntheticDataGenerator -- Generating 500 synthetic financial time series samples
+06:35:58.083 [main] INFO com.therighthandapp.autobads.financial.model.SyntheticDataGenerator -- Generating 5 synthetic financial time series samples
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.264 s -- in com.therighthandapp.autobads.financial.model.SyntheticDataGeneratorTest
+[INFO] Running com.therighthandapp.autobads.integration.ServiceLayerIntegrationTest
+06:35:58.304 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.therighthandapp.autobads.integration.ServiceLayerIntegrationTest]: ServiceLayerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+06:35:58.563 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.therighthandapp.autobads.AutoBadsApplication for test class com.therighthandapp.autobads.integration.ServiceLayerIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2025-11-10 06:35:59 - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/univers/.m2/repository/org/json/json/20240303/json-20240303.jar!/org/json/JSONObject.class
+	jar:file:/Users/univers/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-11-10 06:35:59 - Starting ServiceLayerIntegrationTest using Java 23.0.2 with PID 30902 (started by univers in /Users/univers/projects/agentmesh/Auto-BADS)
+2025-11-10 06:35:59 - The following 1 profile is active: "test"
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (/Users/univers/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2025-11-10 06:36:07 - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-10 06:36:09 - 
+    drop table if exists business_idea_metadata cascade 
+2025-11-10 06:36:09 - 
+    drop table if exists business_ideas cascade 
+2025-11-10 06:36:09 - 
+    drop table if exists event_publication cascade 
+2025-11-10 06:36:09 - 
+    create table business_idea_metadata (
+        idea_id uuid not null,
+        metadata_value varchar(1000),
+        metadata_key varchar(255) not null,
+        primary key (idea_id, metadata_key)
+    )
+2025-11-10 06:36:09 - 
+    create table business_ideas (
+        submitted_at timestamp(6) with time zone,
+        id uuid not null,
+        description varchar(255),
+        industry varchar(255),
+        raw_idea varchar(255),
+        structured_problem_statement varchar(255),
+        submitted_by varchar(255),
+        target_market varchar(255),
+        title varchar(255),
+        status enum ('ANALYZING','COMPLETED','FAILED','SOLUTION_SYNTHESIS_IN_PROGRESS','SUBMITTED'),
+        primary key (id)
+    )
+2025-11-10 06:36:09 - 
+    create table event_publication (
+        completion_date timestamp(6) with time zone,
+        publication_date timestamp(6) with time zone,
+        id uuid not null,
+        event_type varchar(255),
+        listener_id varchar(255),
+        serialized_event varchar(255),
+        primary key (id)
+    )
+2025-11-10 06:36:09 - 
+    alter table if exists business_idea_metadata 
+       add constraint FKgb0sqh6s9gyesk3bjdhmb7huv 
+       foreign key (idea_id) 
+       references business_ideas
+2025-11-10 06:36:10 - No model available and auto-train disabled, predictions will use untrained model
+2025-11-10 06:36:10 - Building LSTM model architecture
+2025-11-10 06:36:10 - LSTM model built successfully. Total params: 118593
+2025-11-10 06:36:13 - Initializing prompt registry with enhanced prompts
+2025-11-10 06:36:13 - Loaded 8 prompt templates
+2025-11-10 06:36:14 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-10 06:36:20 - Started ServiceLayerIntegrationTest in 21.601 seconds (process running for 29.265)
+2025-11-10 06:36:20 - 
+    select
+        bi1_0.id,
+        bi1_0.description,
+        bi1_0.industry,
+        bi1_0.raw_idea,
+        bi1_0.status,
+        bi1_0.structured_problem_statement,
+        bi1_0.submitted_at,
+        bi1_0.submitted_by,
+        bi1_0.target_market,
+        bi1_0.title 
+    from
+        business_ideas bi1_0
+2025-11-10 06:36:20 - Ingesting new business idea
+2025-11-10 06:36:20 - Business idea saved with ID: 4576bcb2-1cad-44e2-8fb4-0f0d70e4a0ea
+2025-11-10 06:36:20 - Idea structured successfully for ID: 4576bcb2-1cad-44e2-8fb4-0f0d70e4a0ea
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - IdeaIngestedEvent published for ID: 4576bcb2-1cad-44e2-8fb4-0f0d70e4a0ea
+2025-11-10 06:36:20 - Ingesting new business idea
+2025-11-10 06:36:20 - Business idea saved with ID: 2d1be06a-ed0a-4fd8-85af-6cb4bfb901e8
+2025-11-10 06:36:20 - Idea structured successfully for ID: 2d1be06a-ed0a-4fd8-85af-6cb4bfb901e8
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - IdeaIngestedEvent published for ID: 2d1be06a-ed0a-4fd8-85af-6cb4bfb901e8
+2025-11-10 06:36:20 - Ingesting new business idea
+2025-11-10 06:36:20 - Business idea saved with ID: 10b20d36-ad3f-4775-97c7-8077541c5c83
+2025-11-10 06:36:20 - Idea structured successfully for ID: 10b20d36-ad3f-4775-97c7-8077541c5c83
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - IdeaIngestedEvent published for ID: 10b20d36-ad3f-4775-97c7-8077541c5c83
+2025-11-10 06:36:20 - Ingesting new business idea
+2025-11-10 06:36:20 - Business idea saved with ID: 3ded05e7-7984-4867-a1c7-387b5a9f874c
+2025-11-10 06:36:20 - Idea structured successfully for ID: 3ded05e7-7984-4867-a1c7-387b5a9f874c
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - IdeaIngestedEvent published for ID: 3ded05e7-7984-4867-a1c7-387b5a9f874c
+2025-11-10 06:36:20 - Ingesting new business idea
+2025-11-10 06:36:20 - Business idea saved with ID: 99cbb5a1-7e32-4766-a26e-862237ff865d
+2025-11-10 06:36:20 - Idea structured successfully for ID: 99cbb5a1-7e32-4766-a26e-862237ff865d
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - IdeaIngestedEvent published for ID: 99cbb5a1-7e32-4766-a26e-862237ff865d
+2025-11-10 06:36:20 - Ingesting new business idea
+2025-11-10 06:36:20 - Business idea saved with ID: 76bb032b-a421-4775-b897-eafed85ca32b
+2025-11-10 06:36:20 - Idea structured successfully for ID: 76bb032b-a421-4775-b897-eafed85ca32b
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - IdeaIngestedEvent published for ID: 76bb032b-a421-4775-b897-eafed85ca32b
+2025-11-10 06:36:20 - Ingesting new business idea
+2025-11-10 06:36:20 - Business idea saved with ID: 174c0561-7baf-49b4-b966-b90262143a4a
+2025-11-10 06:36:20 - Idea structured successfully for ID: 174c0561-7baf-49b4-b966-b90262143a4a
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - IdeaIngestedEvent published for ID: 174c0561-7baf-49b4-b966-b90262143a4a
+2025-11-10 06:36:20 - Ingesting new business idea
+2025-11-10 06:36:20 - Business idea saved with ID: 8246c6a5-d060-49ff-a042-91d136b77628
+2025-11-10 06:36:20 - Idea structured successfully for ID: 8246c6a5-d060-49ff-a042-91d136b77628
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - IdeaIngestedEvent published for ID: 8246c6a5-d060-49ff-a042-91d136b77628
+2025-11-10 06:36:20 - Ingesting new business idea
+2025-11-10 06:36:20 - Business idea saved with ID: 905ddef6-7d87-418f-8145-7cf53178743d
+2025-11-10 06:36:20 - Idea structured successfully for ID: 905ddef6-7d87-418f-8145-7cf53178743d
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - IdeaIngestedEvent published for ID: 905ddef6-7d87-418f-8145-7cf53178743d
+2025-11-10 06:36:20 - Ingesting new business idea
+2025-11-10 06:36:20 - Business idea saved with ID: 62021407-98c4-48a5-ad31-1a1ca74419a3
+2025-11-10 06:36:20 - Idea structured successfully for ID: 62021407-98c4-48a5-ad31-1a1ca74419a3
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:20 - IdeaIngestedEvent published for ID: 62021407-98c4-48a5-ad31-1a1ca74419a3
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        business_ideas
+        (description, industry, raw_idea, status, structured_problem_statement, submitted_at, submitted_by, target_market, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        business_ideas
+        (description, industry, raw_idea, status, structured_problem_statement, submitted_at, submitted_by, target_market, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        business_ideas
+        (description, industry, raw_idea, status, structured_problem_statement, submitted_at, submitted_by, target_market, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        business_ideas
+        (description, industry, raw_idea, status, structured_problem_statement, submitted_at, submitted_by, target_market, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        business_ideas
+        (description, industry, raw_idea, status, structured_problem_statement, submitted_at, submitted_by, target_market, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        business_ideas
+        (description, industry, raw_idea, status, structured_problem_statement, submitted_at, submitted_by, target_market, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        business_ideas
+        (description, industry, raw_idea, status, structured_problem_statement, submitted_at, submitted_by, target_market, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        business_ideas
+        (description, industry, raw_idea, status, structured_problem_statement, submitted_at, submitted_by, target_market, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        business_ideas
+        (description, industry, raw_idea, status, structured_problem_statement, submitted_at, submitted_by, target_market, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        business_ideas
+        (description, industry, raw_idea, status, structured_problem_statement, submitted_at, submitted_by, target_market, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    update
+        business_ideas 
+    set
+        description=?,
+        industry=?,
+        raw_idea=?,
+        status=?,
+        structured_problem_statement=?,
+        submitted_at=?,
+        submitted_by=?,
+        target_market=?,
+        title=? 
+    where
+        id=?
+2025-11-10 06:36:21 - 
+    update
+        business_ideas 
+    set
+        description=?,
+        industry=?,
+        raw_idea=?,
+        status=?,
+        structured_problem_statement=?,
+        submitted_at=?,
+        submitted_by=?,
+        target_market=?,
+        title=? 
+    where
+        id=?
+2025-11-10 06:36:21 - 
+    update
+        business_ideas 
+    set
+        description=?,
+        industry=?,
+        raw_idea=?,
+        status=?,
+        structured_problem_statement=?,
+        submitted_at=?,
+        submitted_by=?,
+        target_market=?,
+        title=? 
+    where
+        id=?
+2025-11-10 06:36:21 - 
+    update
+        business_ideas 
+    set
+        description=?,
+        industry=?,
+        raw_idea=?,
+        status=?,
+        structured_problem_statement=?,
+        submitted_at=?,
+        submitted_by=?,
+        target_market=?,
+        title=? 
+    where
+        id=?
+2025-11-10 06:36:21 - 
+    update
+        business_ideas 
+    set
+        description=?,
+        industry=?,
+        raw_idea=?,
+        status=?,
+        structured_problem_statement=?,
+        submitted_at=?,
+        submitted_by=?,
+        target_market=?,
+        title=? 
+    where
+        id=?
+2025-11-10 06:36:21 - 
+    update
+        business_ideas 
+    set
+        description=?,
+        industry=?,
+        raw_idea=?,
+        status=?,
+        structured_problem_statement=?,
+        submitted_at=?,
+        submitted_by=?,
+        target_market=?,
+        title=? 
+    where
+        id=?
+2025-11-10 06:36:21 - 
+    update
+        business_ideas 
+    set
+        description=?,
+        industry=?,
+        raw_idea=?,
+        status=?,
+        structured_problem_statement=?,
+        submitted_at=?,
+        submitted_by=?,
+        target_market=?,
+        title=? 
+    where
+        id=?
+2025-11-10 06:36:21 - 
+    update
+        business_ideas 
+    set
+        description=?,
+        industry=?,
+        raw_idea=?,
+        status=?,
+        structured_problem_statement=?,
+        submitted_at=?,
+        submitted_by=?,
+        target_market=?,
+        title=? 
+    where
+        id=?
+2025-11-10 06:36:21 - 
+    update
+        business_ideas 
+    set
+        description=?,
+        industry=?,
+        raw_idea=?,
+        status=?,
+        structured_problem_statement=?,
+        submitted_at=?,
+        submitted_by=?,
+        target_market=?,
+        title=? 
+    where
+        id=?
+2025-11-10 06:36:21 - 
+    update
+        business_ideas 
+    set
+        description=?,
+        industry=?,
+        raw_idea=?,
+        status=?,
+        structured_problem_statement=?,
+        submitted_at=?,
+        submitted_by=?,
+        target_market=?,
+        title=? 
+    where
+        id=?
+2025-11-10 06:36:21 - 
+    select
+        count(*) 
+    from
+        business_ideas bi1_0
+2025-11-10 06:36:21 - 
+    select
+        bi1_0.id,
+        bi1_0.description,
+        bi1_0.industry,
+        bi1_0.raw_idea,
+        bi1_0.status,
+        bi1_0.structured_problem_statement,
+        bi1_0.submitted_at,
+        bi1_0.submitted_by,
+        bi1_0.target_market,
+        bi1_0.title 
+    from
+        business_ideas bi1_0
+2025-11-10 06:36:21 - Ingesting new business idea
+2025-11-10 06:36:21 - Business idea saved with ID: 83a1db73-f1d0-4c70-b060-da49d64a47cf
+2025-11-10 06:36:21 - Idea structured successfully for ID: 83a1db73-f1d0-4c70-b060-da49d64a47cf
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - IdeaIngestedEvent published for ID: 83a1db73-f1d0-4c70-b060-da49d64a47cf
+2025-11-10 06:36:21 - 
+    select
+        bi1_0.id,
+        bi1_0.description,
+        bi1_0.industry,
+        bi1_0.raw_idea,
+        bi1_0.status,
+        bi1_0.structured_problem_statement,
+        bi1_0.submitted_at,
+        bi1_0.submitted_by,
+        bi1_0.target_market,
+        bi1_0.title 
+    from
+        business_ideas bi1_0
+2025-11-10 06:36:21 - Ingesting new business idea
+2025-11-10 06:36:21 - Business idea saved with ID: 03431526-02fc-410a-8d1c-89234c54bc1b
+2025-11-10 06:36:21 - Idea structured successfully for ID: 03431526-02fc-410a-8d1c-89234c54bc1b
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - IdeaIngestedEvent published for ID: 03431526-02fc-410a-8d1c-89234c54bc1b
+2025-11-10 06:36:21 - 
+    select
+        bi1_0.id,
+        bi1_0.description,
+        bi1_0.industry,
+        bi1_0.raw_idea,
+        bi1_0.status,
+        bi1_0.structured_problem_statement,
+        bi1_0.submitted_at,
+        bi1_0.submitted_by,
+        bi1_0.target_market,
+        bi1_0.title 
+    from
+        business_ideas bi1_0
+2025-11-10 06:36:21 - Ingesting new business idea
+2025-11-10 06:36:21 - Business idea saved with ID: 30212b24-fff1-402b-a09b-3d969b0b5bba
+2025-11-10 06:36:21 - Idea structured successfully for ID: 30212b24-fff1-402b-a09b-3d969b0b5bba
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - IdeaIngestedEvent published for ID: 30212b24-fff1-402b-a09b-3d969b0b5bba
+2025-11-10 06:36:21 - 
+    select
+        bi1_0.id,
+        bi1_0.description,
+        bi1_0.industry,
+        bi1_0.raw_idea,
+        bi1_0.status,
+        bi1_0.structured_problem_statement,
+        bi1_0.submitted_at,
+        bi1_0.submitted_by,
+        bi1_0.target_market,
+        bi1_0.title 
+    from
+        business_ideas bi1_0
+2025-11-10 06:36:21 - Ingesting new business idea
+2025-11-10 06:36:21 - Business idea saved with ID: 14a37f4f-5c5d-43be-8c5e-2ab65ad30a9d
+2025-11-10 06:36:21 - Idea structured successfully for ID: 14a37f4f-5c5d-43be-8c5e-2ab65ad30a9d
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - IdeaIngestedEvent published for ID: 14a37f4f-5c5d-43be-8c5e-2ab65ad30a9d
+2025-11-10 06:36:21 - 
+    select
+        bi1_0.id,
+        bi1_0.description,
+        bi1_0.industry,
+        bi1_0.raw_idea,
+        bi1_0.status,
+        bi1_0.structured_problem_statement,
+        bi1_0.submitted_at,
+        bi1_0.submitted_by,
+        bi1_0.target_market,
+        bi1_0.title 
+    from
+        business_ideas bi1_0
+2025-11-10 06:36:21 - Ingesting new business idea
+2025-11-10 06:36:21 - Business idea saved with ID: bddaab25-4a11-499c-87cf-f8acfeb859ed
+2025-11-10 06:36:21 - Idea structured successfully for ID: bddaab25-4a11-499c-87cf-f8acfeb859ed
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - IdeaIngestedEvent published for ID: bddaab25-4a11-499c-87cf-f8acfeb859ed
+2025-11-10 06:36:21 - Ingesting new business idea
+2025-11-10 06:36:21 - Business idea saved with ID: 9b33aea6-4250-4049-bbb9-dc6884928ea8
+2025-11-10 06:36:21 - Idea structured successfully for ID: 9b33aea6-4250-4049-bbb9-dc6884928ea8
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - IdeaIngestedEvent published for ID: 9b33aea6-4250-4049-bbb9-dc6884928ea8
+2025-11-10 06:36:21 - Ingesting new business idea
+2025-11-10 06:36:21 - Business idea saved with ID: a9743804-3973-43d2-83f6-abd84cb3e516
+2025-11-10 06:36:21 - Idea structured successfully for ID: a9743804-3973-43d2-83f6-abd84cb3e516
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - IdeaIngestedEvent published for ID: a9743804-3973-43d2-83f6-abd84cb3e516
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        business_ideas
+        (description, industry, raw_idea, status, structured_problem_statement, submitted_at, submitted_by, target_market, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        business_ideas
+        (description, industry, raw_idea, status, structured_problem_statement, submitted_at, submitted_by, target_market, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        business_ideas
+        (description, industry, raw_idea, status, structured_problem_statement, submitted_at, submitted_by, target_market, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    update
+        business_ideas 
+    set
+        description=?,
+        industry=?,
+        raw_idea=?,
+        status=?,
+        structured_problem_statement=?,
+        submitted_at=?,
+        submitted_by=?,
+        target_market=?,
+        title=? 
+    where
+        id=?
+2025-11-10 06:36:21 - 
+    update
+        business_ideas 
+    set
+        description=?,
+        industry=?,
+        raw_idea=?,
+        status=?,
+        structured_problem_statement=?,
+        submitted_at=?,
+        submitted_by=?,
+        target_market=?,
+        title=? 
+    where
+        id=?
+2025-11-10 06:36:21 - 
+    update
+        business_ideas 
+    set
+        description=?,
+        industry=?,
+        raw_idea=?,
+        status=?,
+        structured_problem_statement=?,
+        submitted_at=?,
+        submitted_by=?,
+        target_market=?,
+        title=? 
+    where
+        id=?
+2025-11-10 06:36:21 - 
+    select
+        bi1_0.id,
+        bi1_0.description,
+        bi1_0.industry,
+        bi1_0.raw_idea,
+        bi1_0.status,
+        bi1_0.structured_problem_statement,
+        bi1_0.submitted_at,
+        bi1_0.submitted_by,
+        bi1_0.target_market,
+        bi1_0.title 
+    from
+        business_ideas bi1_0
+2025-11-10 06:36:21 - 
+    select
+        bi1_0.id,
+        bi1_0.description,
+        bi1_0.industry,
+        bi1_0.raw_idea,
+        bi1_0.status,
+        bi1_0.structured_problem_statement,
+        bi1_0.submitted_at,
+        bi1_0.submitted_by,
+        bi1_0.target_market,
+        bi1_0.title 
+    from
+        business_ideas bi1_0
+2025-11-10 06:36:21 - Ingesting new business idea
+2025-11-10 06:36:21 - Business idea saved with ID: e901ad6c-8184-4d72-a529-0ca189569b54
+2025-11-10 06:36:21 - Idea structured successfully for ID: e901ad6c-8184-4d72-a529-0ca189569b54
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - IdeaIngestedEvent published for ID: e901ad6c-8184-4d72-a529-0ca189569b54
+2025-11-10 06:36:21 - Ingesting new business idea
+2025-11-10 06:36:21 - Business idea saved with ID: 73f5cab1-054d-4acf-9c81-bb76f8488199
+2025-11-10 06:36:21 - Idea structured successfully for ID: 73f5cab1-054d-4acf-9c81-bb76f8488199
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - IdeaIngestedEvent published for ID: 73f5cab1-054d-4acf-9c81-bb76f8488199
+2025-11-10 06:36:21 - Ingesting new business idea
+2025-11-10 06:36:21 - Business idea saved with ID: a77998ab-2198-464c-8faa-e332aada6cb6
+2025-11-10 06:36:21 - Idea structured successfully for ID: a77998ab-2198-464c-8faa-e332aada6cb6
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - IdeaIngestedEvent published for ID: a77998ab-2198-464c-8faa-e332aada6cb6
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        business_ideas
+        (description, industry, raw_idea, status, structured_problem_statement, submitted_at, submitted_by, target_market, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        business_ideas
+        (description, industry, raw_idea, status, structured_problem_statement, submitted_at, submitted_by, target_market, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        business_ideas
+        (description, industry, raw_idea, status, structured_problem_statement, submitted_at, submitted_by, target_market, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    insert 
+    into
+        event_publication
+        (completion_date, event_type, listener_id, publication_date, serialized_event, id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:21 - 
+    update
+        business_ideas 
+    set
+        description=?,
+        industry=?,
+        raw_idea=?,
+        status=?,
+        structured_problem_statement=?,
+        submitted_at=?,
+        submitted_by=?,
+        target_market=?,
+        title=? 
+    where
+        id=?
+2025-11-10 06:36:21 - 
+    update
+        business_ideas 
+    set
+        description=?,
+        industry=?,
+        raw_idea=?,
+        status=?,
+        structured_problem_statement=?,
+        submitted_at=?,
+        submitted_by=?,
+        target_market=?,
+        title=? 
+    where
+        id=?
+2025-11-10 06:36:21 - 
+    update
+        business_ideas 
+    set
+        description=?,
+        industry=?,
+        raw_idea=?,
+        status=?,
+        structured_problem_statement=?,
+        submitted_at=?,
+        submitted_by=?,
+        target_market=?,
+        title=? 
+    where
+        id=?
+2025-11-10 06:36:21 - 
+    select
+        bi1_0.id,
+        bi1_0.description,
+        bi1_0.industry,
+        bi1_0.raw_idea,
+        bi1_0.status,
+        bi1_0.structured_problem_statement,
+        bi1_0.submitted_at,
+        bi1_0.submitted_by,
+        bi1_0.target_market,
+        bi1_0.title 
+    from
+        business_ideas bi1_0
+2025-11-10 06:36:21 - 
+    select
+        bi1_0.id,
+        bi1_0.description,
+        bi1_0.industry,
+        bi1_0.raw_idea,
+        bi1_0.status,
+        bi1_0.structured_problem_statement,
+        bi1_0.submitted_at,
+        bi1_0.submitted_by,
+        bi1_0.target_market,
+        bi1_0.title 
+    from
+        business_ideas bi1_0
+2025-11-10 06:36:21 - Ingesting new business idea
+2025-11-10 06:36:21 - Business idea saved with ID: 7fb9a30a-4781-495c-b5d6-9f8119d82f56
+2025-11-10 06:36:21 - Idea structured successfully for ID: 7fb9a30a-4781-495c-b5d6-9f8119d82f56
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:21 - IdeaIngestedEvent published for ID: 7fb9a30a-4781-495c-b5d6-9f8119d82f56
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.50 s -- in com.therighthandapp.autobads.integration.ServiceLayerIntegrationTest
+[INFO] Running com.therighthandapp.autobads.integration.DatabaseIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2025-11-10 06:36:21 - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/univers/.m2/repository/org/json/json/20240303/json-20240303.jar!/org/json/JSONObject.class
+	jar:file:/Users/univers/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-11-10 06:36:21 - Starting DatabaseIntegrationTest using Java 23.0.2 with PID 30902 (started by univers in /Users/univers/projects/agentmesh/Auto-BADS)
+2025-11-10 06:36:21 - The following 1 profile is active: "test"
+2025-11-10 06:36:24 - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-10 06:36:24 - 
+    drop table if exists business_idea_metadata cascade 
+2025-11-10 06:36:24 - 
+    drop table if exists business_ideas cascade 
+2025-11-10 06:36:24 - 
+    drop table if exists event_publication cascade 
+2025-11-10 06:36:24 - 
+    create table business_idea_metadata (
+        idea_id uuid not null,
+        metadata_value varchar(1000),
+        metadata_key varchar(255) not null,
+        primary key (idea_id, metadata_key)
+    )
+2025-11-10 06:36:24 - 
+    create table business_ideas (
+        submitted_at timestamp(6) with time zone,
+        id uuid not null,
+        description varchar(255),
+        industry varchar(255),
+        raw_idea varchar(255),
+        structured_problem_statement varchar(255),
+        submitted_by varchar(255),
+        target_market varchar(255),
+        title varchar(255),
+        status enum ('ANALYZING','COMPLETED','FAILED','SOLUTION_SYNTHESIS_IN_PROGRESS','SUBMITTED'),
+        primary key (id)
+    )
+2025-11-10 06:36:24 - 
+    create table event_publication (
+        completion_date timestamp(6) with time zone,
+        publication_date timestamp(6) with time zone,
+        id uuid not null,
+        event_type varchar(255),
+        listener_id varchar(255),
+        serialized_event varchar(255),
+        primary key (id)
+    )
+2025-11-10 06:36:24 - 
+    alter table if exists business_idea_metadata 
+       add constraint FKgb0sqh6s9gyesk3bjdhmb7huv 
+       foreign key (idea_id) 
+       references business_ideas
+2025-11-10 06:36:24 - No model available and auto-train disabled, predictions will use untrained model
+2025-11-10 06:36:24 - Building LSTM model architecture
+2025-11-10 06:36:24 - LSTM model built successfully. Total params: 118593
+2025-11-10 06:36:25 - Initializing prompt registry with enhanced prompts
+2025-11-10 06:36:25 - Loaded 8 prompt templates
+2025-11-10 06:36:27 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-10 06:36:31 - Started DatabaseIntegrationTest in 9.388 seconds (process running for 40.005)
+2025-11-10 06:36:31 - 
+    insert 
+    into
+        business_ideas
+        (description, industry, raw_idea, status, structured_problem_statement, submitted_at, submitted_by, target_market, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:31 - 
+    insert 
+    into
+        business_ideas
+        (description, industry, raw_idea, status, structured_problem_statement, submitted_at, submitted_by, target_market, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:31 - 
+    insert 
+    into
+        business_ideas
+        (description, industry, raw_idea, status, structured_problem_statement, submitted_at, submitted_by, target_market, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:31 - 
+    insert 
+    into
+        business_ideas
+        (description, industry, raw_idea, status, structured_problem_statement, submitted_at, submitted_by, target_market, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:31 - 
+    insert 
+    into
+        business_ideas
+        (description, industry, raw_idea, status, structured_problem_statement, submitted_at, submitted_by, target_market, title, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-11-10 06:36:31 - 
+    select
+        count(*) 
+    from
+        business_ideas bi1_0
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.768 s -- in com.therighthandapp.autobads.integration.DatabaseIntegrationTest
+[INFO] Running com.therighthandapp.autobads.integration.LlmAgentIntegrationTest
+2025-11-10 06:36:31 - Initializing prompt registry with enhanced prompts
+2025-11-10 06:36:31 - Loaded 8 prompt templates
+2025-11-10 06:36:31 - Translating unstructured idea to structured problem statement
+2025-11-10 06:36:31 - Response validation failed: Missing required content: 'WHO'. Missing required content: 'WHAT'. Missing required content: 'WHY'. Missing required content: 'WHERE'. Missing required content: 'WHEN'. Missing required content: 'HOW'. 
+2025-11-10 06:36:31 - Initializing prompt registry with enhanced prompts
+2025-11-10 06:36:31 - Loaded 8 prompt templates
+2025-11-10 06:36:31 - Generating testable business hypothesis
+2025-11-10 06:36:31 - Hypothesis validation failed: Missing required content: 'We believe'. Missing required content: 'validate by measuring'. 
+2025-11-10 06:36:31 - Initializing prompt registry with enhanced prompts
+2025-11-10 06:36:31 - Loaded 8 prompt templates
+2025-11-10 06:36:31 - Translating unstructured idea to structured problem statement
+2025-11-10 06:36:31 - Response validation failed: Missing required content: 'WHO'. Missing required content: 'WHAT'. Missing required content: 'WHY'. Missing required content: 'WHERE'. Missing required content: 'WHEN'. Missing required content: 'HOW'. 
+2025-11-10 06:36:31 - Initializing prompt registry with enhanced prompts
+2025-11-10 06:36:31 - Loaded 8 prompt templates
+2025-11-10 06:36:31 - Translating unstructured idea to structured problem statement
+2025-11-10 06:36:31 - Response validation failed: Output too short (min: 300, got: 56). Missing required content: 'WHO'. Missing required content: 'WHAT'. Missing required content: 'WHY'. Missing required content: 'WHERE'. Missing required content: 'WHEN'. Missing required content: 'HOW'. 
+2025-11-10 06:36:31 - Initializing prompt registry with enhanced prompts
+2025-11-10 06:36:31 - Loaded 8 prompt templates
+2025-11-10 06:36:31 - Translating unstructured idea to structured problem statement
+2025-11-10 06:36:31 - Response validation failed: Output too short (min: 300, got: 68). Missing required content: 'WHO'. Missing required content: 'WHAT'. Missing required content: 'WHY'. Missing required content: 'WHERE'. Missing required content: 'WHEN'. Missing required content: 'HOW'. 
+2025-11-10 06:36:31 - Translating unstructured idea to structured problem statement
+2025-11-10 06:36:31 - Response validation failed: Output too short (min: 300, got: 60). Missing required content: 'WHO'. Missing required content: 'WHAT'. Missing required content: 'WHY'. Missing required content: 'WHERE'. Missing required content: 'WHEN'. Missing required content: 'HOW'. 
+2025-11-10 06:36:31 - Initializing prompt registry with enhanced prompts
+2025-11-10 06:36:31 - Loaded 8 prompt templates
+2025-11-10 06:36:31 - Translating unstructured idea to structured problem statement
+2025-11-10 06:36:31 - Response validation failed: Output too short (min: 300, got: 48). Missing required content: 'WHO'. Missing required content: 'WHAT'. Missing required content: 'WHY'. Missing required content: 'WHERE'. Missing required content: 'WHEN'. Missing required content: 'HOW'. 
+2025-11-10 06:36:31 - Initializing prompt registry with enhanced prompts
+2025-11-10 06:36:31 - Loaded 8 prompt templates
+2025-11-10 06:36:31 - Generating testable business hypothesis
+2025-11-10 06:36:31 - Hypothesis validation failed: Missing required content: 'We believe'. Missing required content: 'validate by measuring'. 
+2025-11-10 06:36:31 - Initializing prompt registry with enhanced prompts
+2025-11-10 06:36:31 - Loaded 8 prompt templates
+2025-11-10 06:36:31 - Translating unstructured idea to structured problem statement
+2025-11-10 06:36:31 - Response validation failed: Missing required content: 'WHO'. Missing required content: 'WHAT'. Missing required content: 'WHY'. Missing required content: 'WHERE'. Missing required content: 'WHEN'. Missing required content: 'HOW'. 
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.312 s -- in com.therighthandapp.autobads.integration.LlmAgentIntegrationTest
+[INFO] Running com.therighthandapp.autobads.integration.EndToEndWorkflowTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2025-11-10 06:36:31 - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/univers/.m2/repository/org/json/json/20240303/json-20240303.jar!/org/json/JSONObject.class
+	jar:file:/Users/univers/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-11-10 06:36:31 - Starting EndToEndWorkflowTest using Java 23.0.2 with PID 30902 (started by univers in /Users/univers/projects/agentmesh/Auto-BADS)
+2025-11-10 06:36:31 - The following 1 profile is active: "test"
+2025-11-10 06:36:33 - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-10 06:36:34 - 
+    drop table if exists business_idea_metadata cascade 
+2025-11-10 06:36:34 - 
+    drop table if exists business_ideas cascade 
+2025-11-10 06:36:34 - 
+    drop table if exists event_publication cascade 
+2025-11-10 06:36:34 - 
+    create table business_idea_metadata (
+        idea_id uuid not null,
+        metadata_value varchar(1000),
+        metadata_key varchar(255) not null,
+        primary key (idea_id, metadata_key)
+    )
+2025-11-10 06:36:34 - 
+    create table business_ideas (
+        submitted_at timestamp(6) with time zone,
+        id uuid not null,
+        description varchar(255),
+        industry varchar(255),
+        raw_idea varchar(255),
+        structured_problem_statement varchar(255),
+        submitted_by varchar(255),
+        target_market varchar(255),
+        title varchar(255),
+        status enum ('ANALYZING','COMPLETED','FAILED','SOLUTION_SYNTHESIS_IN_PROGRESS','SUBMITTED'),
+        primary key (id)
+    )
+2025-11-10 06:36:34 - 
+    create table event_publication (
+        completion_date timestamp(6) with time zone,
+        publication_date timestamp(6) with time zone,
+        id uuid not null,
+        event_type varchar(255),
+        listener_id varchar(255),
+        serialized_event varchar(255),
+        primary key (id)
+    )
+2025-11-10 06:36:34 - 
+    alter table if exists business_idea_metadata 
+       add constraint FKgb0sqh6s9gyesk3bjdhmb7huv 
+       foreign key (idea_id) 
+       references business_ideas
+2025-11-10 06:36:34 - No model available and auto-train disabled, predictions will use untrained model
+2025-11-10 06:36:34 - Building LSTM model architecture
+2025-11-10 06:36:34 - LSTM model built successfully. Total params: 118593
+2025-11-10 06:36:35 - Initializing prompt registry with enhanced prompts
+2025-11-10 06:36:35 - Loaded 8 prompt templates
+2025-11-10 06:36:36 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-10 06:36:39 - Started EndToEndWorkflowTest in 7.597 seconds (process running for 48.296)
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: 37a26eb3-513a-4a24-a41d-53eaca5c30de
+2025-11-10 06:36:39 - Idea structured successfully for ID: 37a26eb3-513a-4a24-a41d-53eaca5c30de
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: 37a26eb3-513a-4a24-a41d-53eaca5c30de
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: 1acb2ea0-80b4-4f0a-9a62-adb799566cd2
+2025-11-10 06:36:39 - Idea structured successfully for ID: 1acb2ea0-80b4-4f0a-9a62-adb799566cd2
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: 1acb2ea0-80b4-4f0a-9a62-adb799566cd2
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: 39e91eab-4a4b-46ab-819a-5db40863d781
+2025-11-10 06:36:39 - Idea structured successfully for ID: 39e91eab-4a4b-46ab-819a-5db40863d781
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: 39e91eab-4a4b-46ab-819a-5db40863d781
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: c35bd780-acf0-43d7-a26b-3f4e56004a59
+2025-11-10 06:36:39 - Idea structured successfully for ID: c35bd780-acf0-43d7-a26b-3f4e56004a59
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: c35bd780-acf0-43d7-a26b-3f4e56004a59
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: d9be83a0-3129-483a-99eb-92b15b640c45
+2025-11-10 06:36:39 - Idea structured successfully for ID: d9be83a0-3129-483a-99eb-92b15b640c45
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: d9be83a0-3129-483a-99eb-92b15b640c45
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: b015b6e8-60bf-47d5-ac77-53463a88a37a
+2025-11-10 06:36:39 - Idea structured successfully for ID: b015b6e8-60bf-47d5-ac77-53463a88a37a
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: b015b6e8-60bf-47d5-ac77-53463a88a37a
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: 59438d1a-d2e0-4686-9dce-27ad244ba5d2
+2025-11-10 06:36:39 - Idea structured successfully for ID: 59438d1a-d2e0-4686-9dce-27ad244ba5d2
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: 59438d1a-d2e0-4686-9dce-27ad244ba5d2
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: 26a2829b-e3b7-4b3f-81e2-9ab9f5d55768
+2025-11-10 06:36:39 - Idea structured successfully for ID: 26a2829b-e3b7-4b3f-81e2-9ab9f5d55768
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: 26a2829b-e3b7-4b3f-81e2-9ab9f5d55768
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.985 s -- in com.therighthandapp.autobads.integration.EndToEndWorkflowTest
+[INFO] Running com.therighthandapp.autobads.integration.EventSystemIntegrationTest
+2025-11-10 06:36:39 - 
+    select
+        bi1_0.id,
+        bi1_0.description,
+        bi1_0.industry,
+        bi1_0.raw_idea,
+        bi1_0.status,
+        bi1_0.structured_problem_statement,
+        bi1_0.submitted_at,
+        bi1_0.submitted_by,
+        bi1_0.target_market,
+        bi1_0.title 
+    from
+        business_ideas bi1_0
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: 412f5e00-53c6-4438-b5b3-552d84d41eac
+2025-11-10 06:36:39 - Idea structured successfully for ID: 412f5e00-53c6-4438-b5b3-552d84d41eac
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: 412f5e00-53c6-4438-b5b3-552d84d41eac
+2025-11-10 06:36:39 - 
+    select
+        bi1_0.id,
+        bi1_0.description,
+        bi1_0.industry,
+        bi1_0.raw_idea,
+        bi1_0.status,
+        bi1_0.structured_problem_statement,
+        bi1_0.submitted_at,
+        bi1_0.submitted_by,
+        bi1_0.target_market,
+        bi1_0.title 
+    from
+        business_ideas bi1_0
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.ProductAnalysisCompletedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onProductAnalysisCompleted(com.therighthandapp.autobads.core.events.ProductAnalysisCompletedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.ProductAnalysisCompletedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onProductAnalysisCompleted(com.therighthandapp.autobads.core.events.ProductAnalysisCompletedEvent).
+2025-11-10 06:36:39 - 
+    select
+        bi1_0.id,
+        bi1_0.description,
+        bi1_0.industry,
+        bi1_0.raw_idea,
+        bi1_0.status,
+        bi1_0.structured_problem_statement,
+        bi1_0.submitted_at,
+        bi1_0.submitted_by,
+        bi1_0.target_market,
+        bi1_0.title 
+    from
+        business_ideas bi1_0
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.MarketAnalysisCompletedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onMarketAnalysisCompleted(com.therighthandapp.autobads.core.events.MarketAnalysisCompletedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.MarketAnalysisCompletedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onMarketAnalysisCompleted(com.therighthandapp.autobads.core.events.MarketAnalysisCompletedEvent).
+2025-11-10 06:36:39 - 
+    select
+        bi1_0.id,
+        bi1_0.description,
+        bi1_0.industry,
+        bi1_0.raw_idea,
+        bi1_0.status,
+        bi1_0.structured_problem_statement,
+        bi1_0.submitted_at,
+        bi1_0.submitted_by,
+        bi1_0.target_market,
+        bi1_0.title 
+    from
+        business_ideas bi1_0
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - 
+    select
+        bi1_0.id,
+        bi1_0.description,
+        bi1_0.industry,
+        bi1_0.raw_idea,
+        bi1_0.status,
+        bi1_0.structured_problem_statement,
+        bi1_0.submitted_at,
+        bi1_0.submitted_by,
+        bi1_0.target_market,
+        bi1_0.title 
+    from
+        business_ideas bi1_0
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: 8b49bdb2-be2d-4cfe-90f2-6cd804e207a7
+2025-11-10 06:36:39 - Idea structured successfully for ID: 8b49bdb2-be2d-4cfe-90f2-6cd804e207a7
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: 8b49bdb2-be2d-4cfe-90f2-6cd804e207a7
+2025-11-10 06:36:39 - 
+    select
+        bi1_0.id,
+        bi1_0.description,
+        bi1_0.industry,
+        bi1_0.raw_idea,
+        bi1_0.status,
+        bi1_0.structured_problem_statement,
+        bi1_0.submitted_at,
+        bi1_0.submitted_by,
+        bi1_0.target_market,
+        bi1_0.title 
+    from
+        business_ideas bi1_0
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: d434b492-648d-45a4-890c-b4c65fa21db9
+2025-11-10 06:36:39 - Idea structured successfully for ID: d434b492-648d-45a4-890c-b4c65fa21db9
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: d434b492-648d-45a4-890c-b4c65fa21db9
+2025-11-10 06:36:39 - 
+    select
+        bi1_0.id,
+        bi1_0.description,
+        bi1_0.industry,
+        bi1_0.raw_idea,
+        bi1_0.status,
+        bi1_0.structured_problem_statement,
+        bi1_0.submitted_at,
+        bi1_0.submitted_by,
+        bi1_0.target_market,
+        bi1_0.title 
+    from
+        business_ideas bi1_0
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: 228b0ca0-d4d3-49f4-8157-86aa64c5ebd3
+2025-11-10 06:36:39 - Idea structured successfully for ID: 228b0ca0-d4d3-49f4-8157-86aa64c5ebd3
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: 228b0ca0-d4d3-49f4-8157-86aa64c5ebd3
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: 770ee678-6815-4009-8f65-12591cc4d888
+2025-11-10 06:36:39 - Idea structured successfully for ID: 770ee678-6815-4009-8f65-12591cc4d888
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: 770ee678-6815-4009-8f65-12591cc4d888
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: bb5c90de-e1f2-4a68-beb9-73dfecffe91d
+2025-11-10 06:36:39 - Idea structured successfully for ID: bb5c90de-e1f2-4a68-beb9-73dfecffe91d
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: bb5c90de-e1f2-4a68-beb9-73dfecffe91d
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: b645f9ef-0b6a-465f-824a-b431af8a474d
+2025-11-10 06:36:39 - Idea structured successfully for ID: b645f9ef-0b6a-465f-824a-b431af8a474d
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: b645f9ef-0b6a-465f-824a-b431af8a474d
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: 955d9dc9-43cf-445f-b897-afc5aee7816a
+2025-11-10 06:36:39 - Idea structured successfully for ID: 955d9dc9-43cf-445f-b897-afc5aee7816a
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: 955d9dc9-43cf-445f-b897-afc5aee7816a
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: 5ac60664-8df6-4c98-b503-85a04053db7b
+2025-11-10 06:36:39 - Idea structured successfully for ID: 5ac60664-8df6-4c98-b503-85a04053db7b
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: 5ac60664-8df6-4c98-b503-85a04053db7b
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: 64129001-08b3-4809-8d45-244c834f394a
+2025-11-10 06:36:39 - Idea structured successfully for ID: 64129001-08b3-4809-8d45-244c834f394a
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: 64129001-08b3-4809-8d45-244c834f394a
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: 725d9dbd-a8a7-4baf-8baf-847a0cc057aa
+2025-11-10 06:36:39 - Idea structured successfully for ID: 725d9dbd-a8a7-4baf-8baf-847a0cc057aa
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: 725d9dbd-a8a7-4baf-8baf-847a0cc057aa
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: f11dcd16-e68a-4f1e-85d5-9e9f801dbf02
+2025-11-10 06:36:39 - Idea structured successfully for ID: f11dcd16-e68a-4f1e-85d5-9e9f801dbf02
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: f11dcd16-e68a-4f1e-85d5-9e9f801dbf02
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: 4b487829-61c4-4e7f-9414-494273734975
+2025-11-10 06:36:39 - Idea structured successfully for ID: 4b487829-61c4-4e7f-9414-494273734975
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: 4b487829-61c4-4e7f-9414-494273734975
+2025-11-10 06:36:39 - 
+    select
+        bi1_0.id,
+        bi1_0.description,
+        bi1_0.industry,
+        bi1_0.raw_idea,
+        bi1_0.status,
+        bi1_0.structured_problem_statement,
+        bi1_0.submitted_at,
+        bi1_0.submitted_by,
+        bi1_0.target_market,
+        bi1_0.title 
+    from
+        business_ideas bi1_0
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: d3c632df-f24f-47d3-8b7a-f8d3d1b461a5
+2025-11-10 06:36:39 - Idea structured successfully for ID: d3c632df-f24f-47d3-8b7a-f8d3d1b461a5
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: d3c632df-f24f-47d3-8b7a-f8d3d1b461a5
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: ca078055-3150-4899-8b63-60a57fde7abd
+2025-11-10 06:36:39 - Idea structured successfully for ID: ca078055-3150-4899-8b63-60a57fde7abd
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: ca078055-3150-4899-8b63-60a57fde7abd
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: e56053cc-1cb7-4283-be4a-aa3ee4bcabee
+2025-11-10 06:36:39 - Idea structured successfully for ID: e56053cc-1cb7-4283-be4a-aa3ee4bcabee
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: e56053cc-1cb7-4283-be4a-aa3ee4bcabee
+2025-11-10 06:36:39 - 
+    select
+        bi1_0.id,
+        bi1_0.description,
+        bi1_0.industry,
+        bi1_0.raw_idea,
+        bi1_0.status,
+        bi1_0.structured_problem_statement,
+        bi1_0.submitted_at,
+        bi1_0.submitted_by,
+        bi1_0.target_market,
+        bi1_0.title 
+    from
+        business_ideas bi1_0
+2025-11-10 06:36:39 - Ingesting new business idea
+2025-11-10 06:36:39 - Business idea saved with ID: 32305828-8459-4de9-b93c-0bafc2c43b1a
+2025-11-10 06:36:39 - Idea structured successfully for ID: 32305828-8459-4de9-b93c-0bafc2c43b1a
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:39 - IdeaIngestedEvent published for ID: 32305828-8459-4de9-b93c-0bafc2c43b1a
+2025-11-10 06:36:40 - 
+    select
+        bi1_0.id,
+        bi1_0.description,
+        bi1_0.industry,
+        bi1_0.raw_idea,
+        bi1_0.status,
+        bi1_0.structured_problem_statement,
+        bi1_0.submitted_at,
+        bi1_0.submitted_by,
+        bi1_0.target_market,
+        bi1_0.title 
+    from
+        business_ideas bi1_0
+2025-11-10 06:36:40 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:40 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:40 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:40 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:40 - 
+    select
+        bi1_0.id,
+        bi1_0.description,
+        bi1_0.industry,
+        bi1_0.raw_idea,
+        bi1_0.status,
+        bi1_0.structured_problem_statement,
+        bi1_0.submitted_at,
+        bi1_0.submitted_by,
+        bi1_0.target_market,
+        bi1_0.title 
+    from
+        business_ideas bi1_0
+2025-11-10 06:36:40 - Ingesting new business idea
+2025-11-10 06:36:40 - Business idea saved with ID: 6d444c0a-8e71-45d7-b8bd-13190dbc81aa
+2025-11-10 06:36:40 - Idea structured successfully for ID: 6d444c0a-8e71-45d7-b8bd-13190dbc81aa
+2025-11-10 06:36:40 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:40 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:40 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:40 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:40 - IdeaIngestedEvent published for ID: 6d444c0a-8e71-45d7-b8bd-13190dbc81aa
+2025-11-10 06:36:40 - Ingesting new business idea
+2025-11-10 06:36:40 - Business idea saved with ID: c295d03a-0952-4cab-b174-5447edfc3dda
+2025-11-10 06:36:40 - Idea structured successfully for ID: c295d03a-0952-4cab-b174-5447edfc3dda
+2025-11-10 06:36:40 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:40 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:40 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:40 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:40 - IdeaIngestedEvent published for ID: c295d03a-0952-4cab-b174-5447edfc3dda
+2025-11-10 06:36:40 - Ingesting new business idea
+2025-11-10 06:36:40 - Business idea saved with ID: d9cb2134-8a80-4f95-942c-6c7d0cb128eb
+2025-11-10 06:36:40 - Idea structured successfully for ID: d9cb2134-8a80-4f95-942c-6c7d0cb128eb
+2025-11-10 06:36:40 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:40 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:40 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:40 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:40 - IdeaIngestedEvent published for ID: d9cb2134-8a80-4f95-942c-6c7d0cb128eb
+2025-11-10 06:36:40 - 
+    select
+        bi1_0.id,
+        bi1_0.description,
+        bi1_0.industry,
+        bi1_0.raw_idea,
+        bi1_0.status,
+        bi1_0.structured_problem_statement,
+        bi1_0.submitted_at,
+        bi1_0.submitted_by,
+        bi1_0.target_market,
+        bi1_0.title 
+    from
+        business_ideas bi1_0
+2025-11-10 06:36:40 - Ingesting new business idea
+2025-11-10 06:36:40 - Business idea saved with ID: a70b0722-795e-43dd-8bbb-77eed153215d
+2025-11-10 06:36:40 - Idea structured successfully for ID: a70b0722-795e-43dd-8bbb-77eed153215d
+2025-11-10 06:36:40 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.financial.AnalyticalAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:40 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.market.MarketAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:40 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.product.ProductAgentService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:40 - Registering publication of com.therighthandapp.autobads.core.events.IdeaIngestedEvent for com.therighthandapp.autobads.solution.SolutionSynthesisService.onIdeaIngested(com.therighthandapp.autobads.core.events.IdeaIngestedEvent).
+2025-11-10 06:36:40 - IdeaIngestedEvent published for ID: a70b0722-795e-43dd-8bbb-77eed153215d
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.351 s -- in com.therighthandapp.autobads.integration.EventSystemIntegrationTest
+[INFO] Running com.therighthandapp.autobads.integration.RedisCacheIntegrationTest
+2025-11-10 06:36:40 - Image pull policy will be performed by: DefaultPullPolicy()
+2025-11-10 06:36:40 - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-11-10 06:36:40 - Found Docker environment with Docker accessed via Unix socket (/Users/univers/.docker/run/docker.sock)
+2025-11-10 06:36:40 - Docker host IP address is localhost
+2025-11-10 06:36:40 - Connected to docker: 
+  Server Version: 28.5.1
+  API Version: 1.51
+  Operating System: Docker Desktop
+  Total Memory: 7937 MB
+2025-11-10 06:36:42 - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-11-10 06:36:42 - Checking the system...
+2025-11-10 06:36:42 - ✔︎ Docker server version should be at least 1.6.0
+2025-11-10 06:36:42 - Reuse was requested but the environment does not support the reuse of containers
+To enable reuse of containers, you must set 'testcontainers.reuse.enable=true' in a file located at /Users/univers/.testcontainers.properties
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2025-11-10 06:36:42 - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/univers/.m2/repository/org/json/json/20240303/json-20240303.jar!/org/json/JSONObject.class
+	jar:file:/Users/univers/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-11-10 06:36:42 - Starting RedisCacheIntegrationTest using Java 23.0.2 with PID 30902 (started by univers in /Users/univers/projects/agentmesh/Auto-BADS)
+2025-11-10 06:36:42 - The following 1 profile is active: "test"
+2025-11-10 06:36:44 - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-10 06:36:44 - 
+    drop table if exists event_publication cascade 
+2025-11-10 06:36:44 - 
+    create table event_publication (
+        completion_date timestamp(6) with time zone,
+        publication_date timestamp(6) with time zone,
+        id uuid not null,
+        event_type varchar(255),
+        listener_id varchar(255),
+        serialized_event varchar(255),
+        primary key (id)
+    )
+2025-11-10 06:36:45 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-10 06:36:49 - Started RedisCacheIntegrationTest in 7.076 seconds (process running for 58.499)
+2025-11-10 06:36:50 - Cannot reconnect to [localhost/<unresolved>:61531]: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:403)
+	at java.base/sun.nio.ch.SocketChannelImpl.implRead(SocketChannelImpl.java:435)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:493)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.68 s -- in com.therighthandapp.autobads.integration.RedisCacheIntegrationTest
+[INFO] Running com.therighthandapp.autobads.AutoBadsApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2025-11-10 06:36:51 - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/univers/.m2/repository/org/json/json/20240303/json-20240303.jar!/org/json/JSONObject.class
+	jar:file:/Users/univers/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-11-10 06:36:51 - Starting AutoBadsApplicationTests using Java 23.0.2 with PID 30902 (started by univers in /Users/univers/projects/agentmesh/Auto-BADS)
+2025-11-10 06:36:51 - The following 1 profile is active: "test"
+2025-11-10 06:36:52 - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-10 06:36:52 - 
+    drop table if exists business_idea_metadata cascade 
+2025-11-10 06:36:52 - 
+    drop table if exists business_ideas cascade 
+2025-11-10 06:36:52 - 
+    drop table if exists event_publication cascade 
+2025-11-10 06:36:52 - 
+    create table business_idea_metadata (
+        idea_id uuid not null,
+        metadata_value varchar(1000),
+        metadata_key varchar(255) not null,
+        primary key (idea_id, metadata_key)
+    )
+2025-11-10 06:36:52 - 
+    create table business_ideas (
+        submitted_at timestamp(6) with time zone,
+        id uuid not null,
+        description varchar(255),
+        industry varchar(255),
+        raw_idea varchar(255),
+        structured_problem_statement varchar(255),
+        submitted_by varchar(255),
+        target_market varchar(255),
+        title varchar(255),
+        status enum ('ANALYZING','COMPLETED','FAILED','SOLUTION_SYNTHESIS_IN_PROGRESS','SUBMITTED'),
+        primary key (id)
+    )
+2025-11-10 06:36:52 - 
+    create table event_publication (
+        completion_date timestamp(6) with time zone,
+        publication_date timestamp(6) with time zone,
+        id uuid not null,
+        event_type varchar(255),
+        listener_id varchar(255),
+        serialized_event varchar(255),
+        primary key (id)
+    )
+2025-11-10 06:36:52 - 
+    alter table if exists business_idea_metadata 
+       add constraint FKgb0sqh6s9gyesk3bjdhmb7huv 
+       foreign key (idea_id) 
+       references business_ideas
+2025-11-10 06:36:52 - No model available and auto-train disabled, predictions will use untrained model
+2025-11-10 06:36:52 - Building LSTM model architecture
+2025-11-10 06:36:52 - LSTM model built successfully. Total params: 118593
+2025-11-10 06:36:52 - Initializing prompt registry with enhanced prompts
+2025-11-10 06:36:52 - Loaded 8 prompt templates
+2025-11-10 06:36:54 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-10 06:36:57 - Started AutoBadsApplicationTests in 6.772 seconds (process running for 66.6)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.961 s -- in com.therighthandapp.autobads.AutoBadsApplicationTests
+[INFO] Running com.therighthandapp.autobads.prompts.PromptRegistryTest
+2025-11-10 06:36:57 - Initializing prompt registry with enhanced prompts
+2025-11-10 06:36:57 - Loaded 8 prompt templates
+2025-11-10 06:36:57 - Initializing prompt registry with enhanced prompts
+2025-11-10 06:36:57 - Loaded 8 prompt templates
+2025-11-10 06:36:57 - Initializing prompt registry with enhanced prompts
+2025-11-10 06:36:57 - Loaded 8 prompt templates
+2025-11-10 06:36:57 - Initializing prompt registry with enhanced prompts
+2025-11-10 06:36:57 - Loaded 8 prompt templates
+2025-11-10 06:36:57 - Initializing prompt registry with enhanced prompts
+2025-11-10 06:36:57 - Loaded 8 prompt templates
+2025-11-10 06:36:57 - Initializing prompt registry with enhanced prompts
+2025-11-10 06:36:57 - Loaded 8 prompt templates
+2025-11-10 06:36:57 - Initializing prompt registry with enhanced prompts
+2025-11-10 06:36:57 - Loaded 8 prompt templates
+2025-11-10 06:36:57 - Initializing prompt registry with enhanced prompts
+2025-11-10 06:36:57 - Loaded 8 prompt templates
+2025-11-10 06:36:57 - Initializing prompt registry with enhanced prompts
+2025-11-10 06:36:57 - Loaded 8 prompt templates
+2025-11-10 06:36:57 - Initializing prompt registry with enhanced prompts
+2025-11-10 06:36:57 - Loaded 8 prompt templates
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.069 s -- in com.therighthandapp.autobads.prompts.PromptRegistryTest
+[INFO] Running com.therighthandapp.autobads.prompts.PromptTemplateTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 s -- in com.therighthandapp.autobads.prompts.PromptTemplateTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 92, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:27 min
+[INFO] Finished at: 2025-11-10T06:36:58+03:30
+[INFO] ------------------------------------------------------------------------

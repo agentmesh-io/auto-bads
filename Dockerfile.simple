@@ -1,0 +1,34 @@
+# Simplified Dockerfile for development with IDE-compiled classes
+FROM eclipse-temurin:22-jre-alpine
+
+WORKDIR /app
+
+# Install wget for health checks
+RUN apk add --no-cache wget
+
+# Create non-root user
+RUN addgroup -S autobads && adduser -S autobads -G autobads
+
+# Copy pre-compiled classes from IDE/Maven
+# Note: Build the project in your IDE first, then run docker build
+COPY target/Auto-BADS-*.jar /app/auto-bads.jar 2>/dev/null || echo "Warning: JAR not found, build project first"
+
+# Change ownership
+RUN chown -R autobads:autobads /app || true
+
+# Switch to non-root user
+USER autobads
+
+# Expose port
+EXPOSE 8080
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s --start-period=60s --retries=3 \
+  CMD wget --no-verbose --tries=1 --spider http://localhost:8080/actuator/health || exit 1
+
+# JVM options
+ENV JAVA_OPTS="-Xmx512m -Xms256m"
+
+# Run application
+ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar /app/auto-bads.jar"]
+

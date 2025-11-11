@@ -1,0 +1,73 @@
+# Test profile - uses H2 database, no external services required
+
+spring:
+  application:
+    name: Auto-BADS-Test
+
+  datasource:
+    url: jdbc:h2:mem:testdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    defer-datasource-initialization: true
+  
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema-h2.sql
+
+  # Disable Flyway for tests (Hibernate creates schema)
+  flyway:
+    enabled: false
+
+  # Disable Redis for unit tests
+  data:
+    redis:
+      enabled: false
+
+  # Mock AI configuration for tests
+  ai:
+    openai:
+      api-key: test-key
+      chat:
+        model: gpt-4-turbo-preview
+        enabled: false
+
+  # Kafka not required for tests
+  kafka:
+    bootstrap-servers: localhost:9092
+
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration
+
+# Disable Kafka for tests
+auto-bads:
+  recommendation:
+    weights:
+      strategic-alignment: 0.30
+      technical-feasibility: 0.25
+      market-opportunity: 0.25
+      resource-cost: 0.20
+    pmf-threshold: 40.0
+  
+  # ML Test Configuration
+  ml:
+    model-path: ${java.io.tmpdir}/test-lstm-model.zip
+    auto-train: false
+    training-samples: 10
+    training-epochs: 2
+
+logging:
+  level:
+    root: WARN
+    com.therighthandapp.autobads: INFO
+    org.testcontainers: INFO

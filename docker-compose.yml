@@ -1,0 +1,150 @@
+version: '3.8'
+
+services:
+  # Auto-BADS Application
+  autobads:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: autobads-app
+    ports:
+      - "8080:8080"
+    environment:
+      # Spring Profile
+      - SPRING_PROFILES_ACTIVE=docker
+
+      # OpenAI Configuration
+      - SPRING_AI_OPENAI_API_KEY=${OPENAI_API_KEY}
+      - SPRING_AI_OPENAI_CHAT_MODEL=gpt-4-turbo-preview
+      - SPRING_AI_OPENAI_CHAT_TEMPERATURE=0.7
+
+      # Database Configuration (PostgreSQL)
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/autobads
+      - SPRING_DATASOURCE_USERNAME=autobads
+      - SPRING_DATASOURCE_PASSWORD=autobads_password
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+
+      # Kafka Configuration
+      - SPRING_KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+
+      # Application Configuration
+      - AUTO_BADS_RECOMMENDATION_WEIGHTS_STRATEGIC_ALIGNMENT=0.30
+      - AUTO_BADS_RECOMMENDATION_WEIGHTS_TECHNICAL_FEASIBILITY=0.25
+      - AUTO_BADS_RECOMMENDATION_WEIGHTS_MARKET_OPPORTUNITY=0.25
+      - AUTO_BADS_RECOMMENDATION_WEIGHTS_RESOURCE_COST=0.20
+      - AUTO_BADS_RECOMMENDATION_PMF_THRESHOLD=40.0
+
+      # JVM Options
+      - JAVA_OPTS=-Xmx1g -Xms512m
+    depends_on:
+      postgres:
+        condition: service_healthy
+      kafka:
+        condition: service_started
+    networks:
+      - autobads-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+
+  # PostgreSQL Database
+  postgres:
+    image: postgres:16-alpine
+    container_name: autobads-postgres
+    environment:
+      - POSTGRES_DB=autobads
+      - POSTGRES_USER=autobads
+      - POSTGRES_PASSWORD=autobads_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./docker/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - autobads-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U autobads"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Zookeeper (required for Kafka)
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.5.0
+    container_name: autobads-zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    networks:
+      - autobads-network
+    restart: unless-stopped
+
+  # Apache Kafka
+  kafka:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: autobads-kafka
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+    networks:
+      - autobads-network
+    restart: unless-stopped
+
+  # Prometheus for Metrics
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: autobads-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./docker/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus-data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    networks:
+      - autobads-network
+    restart: unless-stopped
+
+  # Grafana for Visualization
+  grafana:
+    image: grafana/grafana:latest
+    container_name: autobads-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_INSTALL_PLUGINS=redis-datasource
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./docker/grafana/dashboards:/etc/grafana/provisioning/dashboards
+      - ./docker/grafana/datasources:/etc/grafana/provisioning/datasources
+    depends_on:
+      - prometheus
+    networks:
+      - autobads-network
+    restart: unless-stopped
+
+networks:
+  autobads-network:
+    driver: bridge
+
+volumes:
+  postgres-data:
+  prometheus-data:
+  grafana-data:
+

@@ -1,0 +1,202 @@
+# Production Profile Configuration
+
+spring:
+  # PostgreSQL Database (Production)
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/autobads}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: ${DB_POOL_MAX_SIZE:20}
+      minimum-idle: ${DB_POOL_MIN_IDLE:5}
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      leak-detection-threshold: 60000
+
+  jpa:
+    hibernate:
+      ddl-auto: validate  # Let Flyway handle migrations
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: false
+        jdbc:
+          batch_size: 20
+        order_inserts: true
+        order_updates: true
+        cache:
+          use_second_level_cache: true
+          use_query_cache: true
+          region:
+            factory_class: org.hibernate.cache.jcache.JCacheRegionFactory
+
+  # Flyway Database Migrations
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+    validate-on-migrate: true
+
+  # Spring AI - Production
+  ai:
+    openai:
+      api-key: ${SPRING_AI_OPENAI_API_KEY}
+      chat:
+        model: ${SPRING_AI_OPENAI_CHAT_MODEL:gpt-4-turbo-preview}
+        temperature: ${SPRING_AI_OPENAI_CHAT_TEMPERATURE:0.7}
+        max-tokens: 2000
+
+  # Kafka - Production
+  kafka:
+    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS}
+    consumer:
+      group-id: auto-bads-prod
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+      properties:
+        isolation.level: read_committed
+    producer:
+      acks: all
+      retries: 3
+      properties:
+        enable.idempotence: true
+        max.in.flight.requests.per.connection: 5
+
+  # Redis Cache (Production)
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+      timeout: 2000ms
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 2
+
+  cache:
+    type: redis
+    redis:
+      time-to-live: 3600000  # 1 hour default
+
+# Auto-BADS Configuration
+auto-bads:
+  recommendation:
+    weights:
+      strategic-alignment: ${AUTO_BADS_WEIGHTS_STRATEGIC:0.30}
+      technical-feasibility: ${AUTO_BADS_WEIGHTS_TECHNICAL:0.25}
+      market-opportunity: ${AUTO_BADS_WEIGHTS_MARKET:0.25}
+      resource-cost: ${AUTO_BADS_WEIGHTS_RESOURCE:0.20}
+    pmf-threshold: ${AUTO_BADS_PMF_THRESHOLD:40.0}
+  
+  # Machine Learning Configuration
+  ml:
+    model-path: ${AUTO_BADS_ML_MODEL_PATH:/var/lib/autobads/models/lstm-financial-forecasting.zip}
+    auto-train: ${AUTO_BADS_ML_AUTO_TRAIN:false}  # Don't train in prod
+    training-samples: 500
+    training-epochs: 100
+
+# AgentMesh Integration - Production
+agentmesh:
+  api:
+    url: ${AGENTMESH_API_URL}
+    key: ${AGENTMESH_API_KEY}
+
+# Resilience4j - Production tuned
+resilience4j:
+  circuitbreaker:
+    instances:
+      agentmesh:
+        registerHealthIndicator: true
+        slidingWindowSize: 20
+        permittedNumberOfCallsInHalfOpenState: 5
+        slidingWindowType: COUNT_BASED
+        minimumNumberOfCalls: 10
+        waitDurationInOpenState: 60s
+        failureRateThreshold: 50
+        slowCallRateThreshold: 50
+        slowCallDurationThreshold: 5s
+      llm:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        permittedNumberOfCallsInHalfOpenState: 3
+        minimumNumberOfCalls: 5
+        waitDurationInOpenState: 120s
+        failureRateThreshold: 60
+        slowCallRateThreshold: 70
+        slowCallDurationThreshold: 10s
+  retry:
+    instances:
+      agentmesh:
+        maxAttempts: 3
+        waitDuration: 2s
+        enableExponentialBackoff: true
+        exponentialBackoffMultiplier: 2
+      llm:
+        maxAttempts: 3
+        waitDuration: 5s
+        enableExponentialBackoff: true
+        exponentialBackoffMultiplier: 2
+  timelimiter:
+    instances:
+      agentmesh:
+        timeoutDuration: 30s
+      llm:
+        timeoutDuration: 60s
+
+# Actuator - Secured for production
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus,modulith
+      base-path: /actuator
+  endpoint:
+    health:
+      show-details: when-authorized
+      probes:
+        enabled: true
+  health:
+    livenessState:
+      enabled: true
+    readinessState:
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    tags:
+      application: ${spring.application.name}
+      environment: production
+
+# Logging - Production level
+logging:
+  level:
+    root: WARN
+    com.therighthandapp.autobads: INFO
+    org.springframework.modulith: INFO
+    org.springframework.ai: WARN
+    org.hibernate.SQL: WARN
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: /var/log/autobads/application.log
+    max-size: 10MB
+    max-history: 30
+
+# Server - Production
+server:
+  port: ${SERVER_PORT:8083}
+  error:
+    include-message: never
+    include-binding-errors: never
+    include-stacktrace: never
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json
+  http2:
+    enabled: true

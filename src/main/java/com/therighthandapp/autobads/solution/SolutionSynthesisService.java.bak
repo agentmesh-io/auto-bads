@@ -1,0 +1,119 @@
+package com.therighthandapp.autobads.solution;
+
+import com.therighthandapp.autobads.core.domain.*;
+import com.therighthandapp.autobads.core.events.*;
+import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.modulith.events.ApplicationModuleListener;
+import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
+
+/**
+ * Solution Synthesis Service - Orchestrates solution package generation and recommendation
+ */
+@Service
+@RequiredArgsConstructor
+public class SolutionSynthesisService {
+
+    private final BuildSolutionGenerator buildGenerator;
+    private final BuySolutionGenerator buyGenerator;
+    private final HybridSolutionGenerator hybridGenerator;
+    private final SrsGenerator srsGenerator;
+    private final RecommendationEngine recommendationEngine;
+    private final ApplicationEventPublisher eventPublisher;
+    private final BusinessIdeaRepository ideaRepository;
+
+    private final ConcurrentHashMap<UUID, SynthesisContext> contextMap = new ConcurrentHashMap<>();
+
+    @ApplicationModuleListener
+    public void onIdeaIngested(IdeaIngestedEvent event) {
+        log.info("Solution Synthesis received idea: {}", event.getIdeaId());
+        contextMap.put(event.getIdeaId(), new SynthesisContext(event));
+    }
+
+    @ApplicationModuleListener
+    public void onMarketAnalysisCompleted(MarketAnalysisCompletedEvent event) {
+        log.info("Solution Synthesis received market analysis: {}", event.getIdeaId());
+        contextMap.computeIfPresent(event.getIdeaId(), (k, ctx) -> {
+            ctx.setMarketAnalysis(event.getAnalysisResult());
+            return ctx;
+        });
+    }
+
+    @ApplicationModuleListener
+    public void onProductAnalysisCompleted(ProductAnalysisCompletedEvent event) {
+        log.info("Solution Synthesis received product analysis: {}", event.getIdeaId());
+        contextMap.computeIfPresent(event.getIdeaId(), (k, ctx) -> {
+            ctx.setProductAnalysis(event.getAnalysisResult());
+            return ctx;
+        });
+    }
+
+    @ApplicationModuleListener
+    public void onFinancialAnalysisCompleted(FinancialAnalysisCompletedEvent event) {
+        log.info("Solution Synthesis received financial analysis: {}", event.getIdeaId());
+        contextMap.computeIfPresent(event.getIdeaId(), (k, ctx) -> {
+            ctx.setFinancialAnalysis(event.getAnalysisResult());
+            checkAndSynthesizeSolution(event.getIdeaId(), ctx);
+            return ctx;
+        });
+    }
+
+    private void checkAndSynthesizeSolution(UUID ideaId, SynthesisContext context) {
+        if (context.isReadyForSynthesis()) {
+            log.info("All analyses complete, synthesizing solutions for: {}", ideaId);
+
+            // Update idea status
+            updateIdeaStatus(ideaId, BusinessIdea.IdeaStatus.SOLUTION_SYNTHESIS_IN_PROGRESS);
+
+            // Generate all solution packages
+            List<SolutionPackage> solutions = generateSolutionPackages(ideaId, context);
+
+            // Recommend best solution
+            SolutionPackage recommended = recommendationEngine.selectBestSolution(solutions, context);
+            String recommendation = recommendationEngine.generateRecommendation(recommended, context);
+
+            // Update idea status to completed
+            updateIdeaStatus(ideaId, BusinessIdea.IdeaStatus.COMPLETED);
+
+            // Publish completion event
+            SolutionRecommendationCompletedEvent event = SolutionRecommendationCompletedEvent.builder()
+                    .ideaId(ideaId)
+                    .allSolutionPackages(solutions)
+                    .recommendedSolution(recommended)
+                    .recommendation(recommendation)
+                    .timestamp(LocalDateTime.now())
+                    .build();
+
+            eventPublisher.publishEvent(event);
+            log.info("Solution synthesis completed for idea: {}", ideaId);
+        }
+    }
+
+    private List<SolutionPackage> generateSolutionPackages(UUID ideaId, SynthesisContext context) {
+        log.info("Generating Build, Buy, and Hybrid solution packages");
+
+        String ideaIdStr = ideaId.toString();
+
+        // Generate SRS for all solutions
+        String srsDocument = srsGenerator.generateSrs(context);
+
+        // Generate three solution alternatives
+        SolutionPackage buildSolution = buildGenerator.generateBuildSolution(ideaIdStr, srsDocument, context);
+        SolutionPackage buySolution = buyGenerator.generateBuySolution(ideaIdStr, srsDocument, context);
+        SolutionPackage hybridSolution = hybridGenerator.generateHybridSolution(ideaIdStr, srsDocument, context);
+
+        return List.of(buildSolution, buySolution, hybridSolution);
+    }
+
+    private void updateIdeaStatus(UUID ideaId, BusinessIdea.IdeaStatus status) {
+        ideaRepository.findById(ideaId).ifPresent(idea -> {
+            idea.setStatus(status);
+            ideaRepository.save(idea);
+        });
+    }
+}
+

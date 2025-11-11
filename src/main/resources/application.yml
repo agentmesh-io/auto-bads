@@ -1,0 +1,134 @@
+# Auto-BADS Application Configuration
+
+spring:
+  application:
+    name: Auto-BADS
+
+  # Database Configuration (H2 for development)
+  datasource:
+    url: jdbc:h2:mem:autobads
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.H2Dialect
+
+  # Spring AI Configuration
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:your-key-here}
+      chat:
+        model: gpt-4-turbo-preview
+        temperature: 0.7
+        max-tokens: 2000
+
+  # Kafka Configuration
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    consumer:
+      group-id: auto-bads-consumer
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "com.therighthandapp.*"
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.add.type.headers: false
+
+# Auto-BADS Specific Configuration
+auto-bads:
+  # Recommendation Engine Weights
+  recommendation:
+    weights:
+      strategic-alignment: 0.30
+      technical-feasibility: 0.25
+      market-opportunity: 0.25
+      resource-cost: 0.20
+    pmf-threshold: 40.0  # Product-Market Fit 40% rule threshold
+  
+  # Machine Learning Configuration
+  ml:
+    model-path: models/lstm-financial-forecasting.zip
+    auto-train: true
+    training-samples: 200
+    training-epochs: 50
+
+# AgentMesh Integration Configuration
+agentmesh:
+  api:
+    url: ${AGENTMESH_API_URL:http://localhost:8080}
+    key: ${AGENTMESH_API_KEY:}
+
+# Resilience4j Configuration
+resilience4j:
+  circuitbreaker:
+    instances:
+      agentmesh:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowType: COUNT_BASED
+        minimumNumberOfCalls: 5
+        waitDurationInOpenState: 60s
+        failureRateThreshold: 50
+        eventConsumerBufferSize: 10
+        recordExceptions:
+          - com.therighthandapp.autobads.integration.IntegrationException
+          - java.io.IOException
+          - java.util.concurrent.TimeoutException
+  retry:
+    instances:
+      agentmesh:
+        maxAttempts: 3
+        waitDuration: 2s
+        enableExponentialBackoff: true
+        exponentialBackoffMultiplier: 2
+        retryExceptions:
+          - com.therighthandapp.autobads.integration.IntegrationException
+          - java.io.IOException
+        ignoreExceptions:
+          - java.lang.IllegalArgumentException
+
+# Actuator Configuration
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus,modulith
+  endpoint:
+    health:
+      show-details: always
+
+# Logging Configuration
+logging:
+  level:
+    root: INFO
+    com.therighthandapp.autobads: DEBUG
+    org.springframework.modulith: DEBUG
+    org.springframework.ai: DEBUG
+    org.hibernate.SQL: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+
+# Server Configuration
+server:
+  port: 8083
+  error:
+    include-message: always
+    include-binding-errors: always
+

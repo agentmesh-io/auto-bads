@@ -1,0 +1,111 @@
+# Docker-specific configuration for Auto-BADS
+
+spring:
+  application:
+    name: Auto-BADS
+
+  # PostgreSQL Database (Docker)
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://postgres:5432/autobads}
+    username: ${SPRING_DATASOURCE_USERNAME:autobads}
+    password: ${SPRING_DATASOURCE_PASSWORD:autobads_password}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+
+  jpa:
+    hibernate:
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:update}
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        jdbc:
+          batch_size: 20
+        order_inserts: true
+        order_updates: true
+
+  # Spring AI Configuration
+  ai:
+    openai:
+      api-key: ${SPRING_AI_OPENAI_API_KEY}
+      chat:
+        model: ${SPRING_AI_OPENAI_CHAT_MODEL:gpt-4-turbo-preview}
+        temperature: ${SPRING_AI_OPENAI_CHAT_TEMPERATURE:0.7}
+        max-tokens: 2000
+
+  # Kafka Configuration
+  kafka:
+    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS:kafka:9092}
+    consumer:
+      group-id: auto-bads
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      properties:
+        spring.json.trusted.packages: '*'
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      properties:
+        spring.json.add.type.headers: false
+
+# Auto-BADS Configuration
+auto-bads:
+  recommendation:
+    weights:
+      strategic-alignment: ${AUTO_BADS_RECOMMENDATION_WEIGHTS_STRATEGIC_ALIGNMENT:0.30}
+      technical-feasibility: ${AUTO_BADS_RECOMMENDATION_WEIGHTS_TECHNICAL_FEASIBILITY:0.25}
+      market-opportunity: ${AUTO_BADS_RECOMMENDATION_WEIGHTS_MARKET_OPPORTUNITY:0.25}
+      resource-cost: ${AUTO_BADS_RECOMMENDATION_WEIGHTS_RESOURCE_COST:0.20}
+    pmf-threshold: ${AUTO_BADS_RECOMMENDATION_PMF_THRESHOLD:40.0}
+
+# Actuator Configuration
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus,modulith
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
+  health:
+    livenessState:
+      enabled: true
+    readinessState:
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
+# Logging Configuration
+logging:
+  level:
+    root: INFO
+    com.therighthandapp.autobads: INFO
+    org.springframework.modulith: INFO
+    org.springframework.ai: INFO
+    org.hibernate.SQL: WARN
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+
+# Server Configuration
+server:
+  port: 8080
+  error:
+    include-message: always
+    include-binding-errors: always
+  shutdown: graceful
+  tomcat:
+    threads:
+      max: 200
+      min-spare: 10
+
