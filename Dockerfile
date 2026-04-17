@@ -16,12 +16,15 @@ COPY src ./src
 RUN mvn clean package -DskipTests -B
 
 # Stage 2: Runtime stage
-FROM eclipse-temurin:21-jre-alpine
+FROM eclipse-temurin:21-jre
 
 WORKDIR /app
 
+# Install required libraries for ND4J
+RUN apt-get update && apt-get install -y libgomp1 && rm -rf /var/lib/apt/lists/*
+
 # Create non-root user for security
-RUN addgroup -S autobads && adduser -S autobads -G autobads
+RUN groupadd -r autobads && useradd -r -g autobads autobads
 
 # Copy JAR from builder stage
 COPY --from=builder /app/target/Auto-BADS-*.jar /app/auto-bads.jar
@@ -33,11 +36,11 @@ RUN chown -R autobads:autobads /app
 USER autobads
 
 # Expose port
-EXPOSE 8080
+EXPOSE 8083
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=3s --start-period=40s --retries=3 \
-  CMD wget --no-verbose --tries=1 --spider http://localhost:8080/actuator/health || exit 1
+  CMD wget --no-verbose --tries=1 --spider http://localhost:8083/actuator/health || exit 1
 
 # JVM options for container
 ENV JAVA_OPTS="-Xmx512m -Xms256m -XX:+UseContainerSupport -XX:MaxRAMPercentage=75.0"

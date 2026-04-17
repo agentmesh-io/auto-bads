@@ -93,12 +93,14 @@ public class PromptRegistry {
                 **Raw Idea:** {rawIdea}
                 
                 **Output Requirements:**
-                - 2-3 concise paragraphs
+                - Maximum 1500 characters total
+                - 2-3 concise paragraphs covering all 5W1H elements
                 - Data-driven where possible (market size, TAM, pain severity)
                 - Avoid jargon; use clear business language
                 - Include quantifiable metrics
+                - DO NOT include examples or sample outputs
                 
-                Provide the structured problem statement:
+                Provide ONLY the structured problem statement without any preamble or examples:
                 """)
             .requiredVariables(List.of("rawIdea"))
             .examples(Arrays.asList(

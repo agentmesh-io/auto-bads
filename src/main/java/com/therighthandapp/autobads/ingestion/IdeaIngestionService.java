@@ -44,13 +44,28 @@ public class IdeaIngestionService {
 
         // Call LLM BEFORE saving to ensure we have complete data
         // This prevents partial state if LLM call fails
-        String structuredProblem = semanticAgent.translateToStructuredProblem(rawIdea);
-        String businessHypothesis = semanticAgent.generateBusinessHypothesis(structuredProblem);
+        // Use fallback if LLM is not available
+        String structuredProblem;
+        String businessHypothesis;
+        
+        try {
+            structuredProblem = semanticAgent.translateToStructuredProblem(rawIdea);
+            businessHypothesis = semanticAgent.generateBusinessHypothesis(structuredProblem);
+        } catch (Exception e) {
+            log.warn("LLM service unavailable, using fallback structured problem statement", e);
+            structuredProblem = "Problem: " + rawIdea + "\n\nNote: Detailed analysis pending LLM availability.";
+            businessHypothesis = "Business hypothesis pending LLM analysis.";
+        }
+
+        // Generate a simple title from the raw idea (first 100 chars or first sentence)
+        String title = generateTitle(rawIdea);
 
         // Create entity with all required data
         BusinessIdea idea = BusinessIdea.builder()
+                .title(title)
                 .rawIdea(rawIdea)
                 .structuredProblemStatement(structuredProblem)
+                .submittedAt(Instant.now())
                 .status(Status.ANALYZING)
                 .build();
 
@@ -71,6 +86,23 @@ public class IdeaIngestionService {
         log.info("IdeaIngestedEvent published for ID: {}", idea.getId());
 
         return idea.getId();
+    }
+
+    /**
+     * Generate a concise title from the raw idea
+     */
+    private String generateTitle(String rawIdea) {
+        if (rawIdea == null || rawIdea.isBlank()) {
+            return "Untitled Idea";
+        }
+        
+        // Take first sentence or first 100 characters, whichever is shorter
+        String title = rawIdea.split("[.!?]")[0].trim();
+        if (title.length() > 100) {
+            title = title.substring(0, 97) + "...";
+        }
+        
+        return title.isEmpty() ? "Untitled Idea" : title;
     }
 
     public BusinessIdea getIdea(UUID ideaId) {

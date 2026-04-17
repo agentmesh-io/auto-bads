@@ -1,9 +1,10 @@
 -- Auto-BADS Initial Schema
 -- Version: V1__initial_schema.sql
+-- PostgreSQL Database
 
 -- Business Ideas table
 CREATE TABLE business_ideas (
-    id UUID PRIMARY KEY,
+    id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     description TEXT,
     raw_idea TEXT,
@@ -29,7 +30,7 @@ CREATE TABLE business_idea_metadata (
 
 -- Analysis Results (Persisted JSON for Product, Financial, Market analysis)
 CREATE TABLE analysis_results (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
     idea_id UUID NOT NULL,
     analysis_type VARCHAR(50) NOT NULL,
     result_data JSONB NOT NULL,
@@ -40,7 +41,7 @@ CREATE TABLE analysis_results (
 
 -- Solution Packages
 CREATE TABLE solution_packages (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
     package_id VARCHAR(255) UNIQUE NOT NULL,
     idea_id UUID NOT NULL,
     solution_type VARCHAR(20) NOT NULL,
@@ -63,7 +64,7 @@ CREATE INDEX idx_analysis_results_type ON analysis_results(analysis_type);
 CREATE INDEX idx_solution_packages_idea_id ON solution_packages(idea_id);
 CREATE INDEX idx_solution_packages_score ON solution_packages(weighted_score DESC);
 
--- GIN index for JSONB queries
+-- GIN indexes for JSONB queries
 CREATE INDEX idx_analysis_results_data ON analysis_results USING GIN(result_data);
 CREATE INDEX idx_solution_packages_data ON solution_packages USING GIN(solution_data);
 
@@ -94,3 +95,5 @@ COMMENT ON TABLE analysis_results IS 'Stores Product, Financial, and Market anal
 COMMENT ON TABLE solution_packages IS 'Stores Build/Buy/Hybrid solution alternatives';
 COMMENT ON COLUMN analysis_results.result_data IS 'JSONB column containing ProductAnalysisResult, FinancialAnalysisResult, or MarketAnalysisResult';
 COMMENT ON COLUMN solution_packages.solution_data IS 'JSONB column containing full SolutionPackage details';
+
+

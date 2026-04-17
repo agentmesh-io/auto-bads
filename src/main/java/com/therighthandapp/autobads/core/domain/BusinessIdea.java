@@ -24,18 +24,29 @@ public class BusinessIdea {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
+    
+    @Column(length = 500)
     private String title;
+    
+    @Column(length = 2000)
     private String description;
+    
+    @Column(length = 5000)
     private String rawIdea;  // Original unprocessed idea text
+    
+    @Column(length = 5000)
     private String structuredProblemStatement;  // AI-generated structured statement
+    
+    @Column(length = 255)
     private String submittedBy;
     
     @Column(name = "submitted_at")
     private Instant submittedAt;
     
+    @Column(length = 255)
     private String industry;
     
-    @Column(name = "target_market")
+    @Column(name = "target_market", length = 1000)
     private String targetMarket;
     
     @ElementCollection

@@ -30,6 +30,11 @@ spring:
         order_inserts: true
         order_updates: true
 
+  # Flyway Configuration
+  flyway:
+    baseline-on-migrate: true
+    baseline-version: 0
+
   # Spring AI Configuration
   ai:
     openai:
@@ -99,7 +104,7 @@ logging:
 
 # Server Configuration
 server:
-  port: 8080
+  port: 8083
   error:
     include-message: always
     include-binding-errors: always
