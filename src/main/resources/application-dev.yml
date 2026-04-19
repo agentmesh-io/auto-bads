@@ -89,8 +89,8 @@ auto-bads:
     training-samples: 100  # Reduced for dev
     training-epochs: 20     # Reduced for dev
 
-# AgentMesh Integration - Local
+# AgentMesh Integration - Local (Java port range: 8081-8100)
 agentmesh:
   api:
-    url: http://localhost:8080
+    url: http://localhost:8081
     key: dev-test-key

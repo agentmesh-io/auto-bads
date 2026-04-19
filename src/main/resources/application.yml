@@ -4,12 +4,12 @@ spring:
   application:
     name: Auto-BADS
 
-  # Database Configuration (PostgreSQL for development)
+  # Database Configuration (shared dev-postgres on port 5435)
   datasource:
-    url: jdbc:postgresql://localhost:5432/autobads
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5435}/${DB_NAME:autobads}
     driver-class-name: org.postgresql.Driver
-    username: agentmesh
-    password: agentmesh123
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:postgres}
 
   jpa:
     hibernate:
@@ -74,7 +74,7 @@ auto-bads:
 # AgentMesh Integration Configuration
 agentmesh:
   api:
-    url: ${AGENTMESH_API_URL:http://localhost:8080}
+    url: ${AGENTMESH_API_URL:http://localhost:8081}
     key: ${AGENTMESH_API_KEY:}
 
 # Resilience4j Configuration
