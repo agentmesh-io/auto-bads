@@ -26,6 +26,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
+import org.junit.jupiter.api.condition.EnabledIf;
+import org.testcontainers.DockerClientFactory;
 import org.testcontainers.containers.GenericContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
@@ -40,13 +42,33 @@ import static org.assertj.core.api.Assertions.assertThat;
 /**
  * Redis cache integration tests using TestContainers.
  * Tests cache hit/miss scenarios, TTL, eviction, and cache manager configuration.
+ *
+ * <p><b>Environment gate (M13.2):</b> the entire class is skipped when no
+ * Docker daemon is reachable (CI runners or developer machines without
+ * OrbStack / Docker Desktop). This is an environment dependency, not a code
+ * defect — see {@link #dockerAvailable()}. CI lanes with Docker SHOULD set
+ * the {@code DOCKER_HOST} variable so these tests execute.</p>
  */
 @SpringBootTest(classes = {RedisCacheIntegrationTest.TestConfig.class})
 @ActiveProfiles("test")
 @EnableAutoConfiguration(exclude = KafkaAutoConfiguration.class)
 @Import(TestKafkaConfig.class)
 @Testcontainers
+@EnabledIf("dockerAvailable")
 class RedisCacheIntegrationTest {
+
+    /**
+     * JUnit5 condition: enables the test class only when TestContainers can
+     * reach a Docker daemon. Returning {@code false} disables the class with
+     * a clean SKIP (not an ERROR), which is the desired CI/local behavior.
+     */
+    static boolean dockerAvailable() {
+        try {
+            return DockerClientFactory.instance().isDockerAvailable();
+        } catch (Throwable t) {
+            return false;
+        }
+    }
 
     @Container
     static GenericContainer<?> redis = new GenericContainer<>(DockerImageName.parse("redis:7-alpine"))

@@ -57,7 +57,10 @@ class ErrorRecoveryTest {
 
     /**
      * Test system handles LLM service failure gracefully.
-     * Should save idea even if semantic translation fails.
+     * <p><b>Contract (M13.2 GA):</b> {@code IdeaIngestionService.ingestIdea}
+     * <em>swallows</em> LLM failures and saves the idea with a fallback
+     * structured-problem statement. This is intentional graceful degradation
+     * so that ideas never get lost when the LLM is briefly down.
      */
     @Test
     void testLlmServiceFailureRecovery() {
@@ -67,11 +70,16 @@ class ErrorRecoveryTest {
 
         // When: Attempt to ingest idea
         String rawIdea = "Test idea during LLM failure";
-        
-        // Then: Should handle gracefully (may throw or return with error status)
-        assertThatThrownBy(() -> ingestionService.ingestIdea(rawIdea))
-            .isInstanceOf(RuntimeException.class)
-            .hasMessageContaining("LLM service unavailable");
+        UUID ideaId = ingestionService.ingestIdea(rawIdea);
+
+        // Then: Idea persisted with fallback content (no exception escapes)
+        assertThat(ideaId).isNotNull();
+        BusinessIdea saved = repository.findById(ideaId).orElse(null);
+        assertThat(saved).isNotNull();
+        assertThat(saved.getRawIdea()).isEqualTo(rawIdea);
+        assertThat(saved.getStructuredProblemStatement())
+            .as("fallback structured-problem statement should mention pending LLM analysis")
+            .containsIgnoringCase("pending");
 
         // Verify attempt was made
         verify(semanticAgent, times(1)).translateToStructuredProblem(rawIdea);
@@ -79,7 +87,9 @@ class ErrorRecoveryTest {
 
     /**
      * Test recovery from transient LLM failures.
-     * Simulates retry logic or graceful degradation.
+     * <p><b>Contract (M13.2 GA):</b> first call (LLM throws) is swallowed and
+     * the idea is saved with a fallback statement. Second call (LLM succeeds)
+     * is saved with the real structured statement. Both attempts complete.
      */
     @Test
     void testTransientLlmFailureRecovery() {
@@ -88,18 +98,20 @@ class ErrorRecoveryTest {
             .thenThrow(new RuntimeException("Transient failure"))
             .thenReturn(VALID_STRUCTURED_PROBLEM);
 
-        // When: First attempt fails
-        assertThatThrownBy(() -> ingestionService.ingestIdea("Idea 1"))
-            .isInstanceOf(RuntimeException.class);
+        // When: First attempt — fails internally, saved with fallback
+        UUID idea1 = ingestionService.ingestIdea("Idea 1");
+        assertThat(idea1).isNotNull();
+        BusinessIdea saved1 = repository.findById(idea1).orElseThrow();
+        assertThat(saved1.getStructuredProblemStatement())
+            .as("transient failure → fallback")
+            .containsIgnoringCase("pending");
 
-        // When: Second attempt succeeds (simulating retry)
-        UUID ideaId = ingestionService.ingestIdea("Idea 2");
-
-        // Then: Second attempt should succeed
-        assertThat(ideaId).isNotNull();
-        BusinessIdea saved = repository.findById(ideaId).orElse(null);
-        assertThat(saved).isNotNull();
-        assertThat(saved.getStructuredProblemStatement()).isEqualTo(VALID_STRUCTURED_PROBLEM);
+        // When: Second attempt succeeds with real value
+        UUID idea2 = ingestionService.ingestIdea("Idea 2");
+        assertThat(idea2).isNotNull();
+        BusinessIdea saved2 = repository.findById(idea2).orElse(null);
+        assertThat(saved2).isNotNull();
+        assertThat(saved2.getStructuredProblemStatement()).isEqualTo(VALID_STRUCTURED_PROBLEM);
     }
 
     /**
@@ -255,9 +267,11 @@ class ErrorRecoveryTest {
     }
 
     /**
-     * Test database transaction rollback on error.
-     * Verifies atomicity of operations.
-     * NOW FIXED: LLM is called BEFORE save, so failures prevent partial data.
+     * Test atomicity around LLM failure.
+     * <p><b>Contract (M13.2 GA):</b> when the LLM throws,
+     * {@code IdeaIngestionService} catches the exception and persists the idea
+     * with a fallback structured-problem statement. The row IS saved (not
+     * rolled back), so subsequent retry/audit can complete the analysis.
      */
     @Test
     void testDatabaseTransactionRollback() {
@@ -265,18 +279,19 @@ class ErrorRecoveryTest {
         when(semanticAgent.translateToStructuredProblem(anyString()))
             .thenThrow(new RuntimeException("Simulated failure during processing"));
 
-        // When: Attempt ingestion that will fail
+        // When: Ingest the idea
         String testIdea = "Transaction rollback test";
-        
-        assertThatThrownBy(() -> ingestionService.ingestIdea(testIdea))
-            .isInstanceOf(RuntimeException.class);
+        UUID ideaId = ingestionService.ingestIdea(testIdea);
 
-        // Then: NO partial data saved because LLM fails before save
+        // Then: row is persisted exactly once with fallback content
+        assertThat(ideaId).isNotNull();
         long count = repository.findAll().stream()
             .filter(idea -> testIdea.equals(idea.getRawIdea()))
             .count();
-        
-        assertThat(count).isEqualTo(0); // No partial data!
+        assertThat(count).isEqualTo(1);
+
+        BusinessIdea saved = repository.findById(ideaId).orElseThrow();
+        assertThat(saved.getStructuredProblemStatement()).containsIgnoringCase("pending");
     }
 
     /**
@@ -311,42 +326,46 @@ class ErrorRecoveryTest {
 
     /**
      * Test system behavior under repeated failures and recovery.
-     * Verifies system doesn't degrade or crash under stress.
-     * 
-     * NOTE: This test documents that repeated failures don't cause system-level
-     * degradation. Each failure is properly isolated and doesn't affect subsequent
-     * requests. The system remains fully operational after failures.
+     * <p><b>Contract (M13.2 GA):</b> {@code IdeaIngestionService.ingestIdea}
+     * never propagates LLM exceptions — it persists each idea with a fallback
+     * structured-problem statement and keeps serving subsequent requests.
+     * This test asserts:
+     * <ul>
+     *   <li>3 consecutive LLM failures → 3 ideas saved with fallback content,</li>
+     *   <li>4th request (LLM recovers) → idea saved with the real structured value.</li>
+     * </ul>
      */
     @Test
     void testRepeatedFailureResilience() {
-        // Given: Mock setup to fail then succeed
+        // Given: Mock setup to fail 3x then succeed
         when(semanticAgent.translateToStructuredProblem(anyString()))
             .thenThrow(new RuntimeException("Service unavailable"))
             .thenThrow(new RuntimeException("Service unavailable"))
             .thenThrow(new RuntimeException("Service unavailable"))
             .thenReturn(VALID_STRUCTURED_PROBLEM);
-        
+
         when(semanticAgent.generateBusinessHypothesis(anyString()))
             .thenReturn("Recovery hypothesis");
 
-        // When: Multiple failed attempts
-        int failureCount = 0;
+        // When: 3 attempts under LLM outage — all swallowed, all persisted
+        int degradedCount = 0;
         for (int i = 0; i < 3; i++) {
-            try {
-                ingestionService.ingestIdea("Idea " + i);
-            } catch (RuntimeException e) {
-                failureCount++;
-                assertThat(e.getMessage()).contains("Service unavailable");
-            }
+            UUID id = ingestionService.ingestIdea("Idea " + i);
+            assertThat(id).as("ingestIdea must never return null").isNotNull();
+            BusinessIdea saved = repository.findById(id).orElseThrow();
+            assertThat(saved.getStructuredProblemStatement())
+                .as("LLM failure → fallback statement must mention pending analysis")
+                .containsIgnoringCase("pending");
+            degradedCount++;
         }
 
-        // Then: All should fail consistently (no crash)
-        assertThat(failureCount).isEqualTo(3);
-        
-        // System should still be operational - 4th call succeeds
+        // Then: 3 ideas saved with fallback (no crash, no exception)
+        assertThat(degradedCount).isEqualTo(3);
+
+        // System remains fully operational — 4th call uses real LLM output
         UUID recoveryId = ingestionService.ingestIdea("Recovery test");
         assertThat(recoveryId).isNotNull();
-        
+
         BusinessIdea recovered = repository.findById(recoveryId).orElse(null);
         assertThat(recovered).isNotNull();
         assertThat(recovered.getStructuredProblemStatement()).isEqualTo(VALID_STRUCTURED_PROBLEM);

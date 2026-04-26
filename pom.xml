@@ -13,7 +13,7 @@
 
     <groupId>com.therighthandapp</groupId>
     <artifactId>Auto-BADS</artifactId>
-    <version>1.0.0-RC1</version>
+    <version>1.0.0</version>
     <name>Auto-BADS</name>
     <description>Autonomous AI-Centered Business Analysis and Development Service</description>
 
